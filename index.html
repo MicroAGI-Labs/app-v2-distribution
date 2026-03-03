@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift — Download</title>
+    <link rel="icon" type="image/png" href="assets/primary_icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1a1a1a;
+            background: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 64px 0 48px;
+        }
+
+        .app-icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #555;
+            letter-spacing: -0.01em;
+        }
+
+        /* Download buttons */
+        .downloads {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            padding-bottom: 64px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: opacity 0.15s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        .btn-ios {
+            background: #1f5439;
+            color: #fff;
+        }
+
+        .btn-android {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .btn svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        /* Guides */
+        .guides {
+            border-top: 1px solid #e5e5e5;
+            padding: 48px 0;
+        }
+
+        .guide {
+            margin-bottom: 48px;
+        }
+
+        .guide:last-child {
+            margin-bottom: 0;
+        }
+
+        .guide h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .guide ol {
+            padding-left: 24px;
+        }
+
+        .guide li {
+            margin-bottom: 12px;
+            color: #444;
+            font-size: 15px;
+        }
+
+        .guide li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid #e5e5e5;
+            padding: 32px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .header {
+                padding: 48px 0 36px;
+            }
+
+            .downloads {
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 48px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="assets/primary_icon.png" alt="Shift" class="app-icon">
+            <h1>Get early access to Shift</h1>
+        </header>
+
+        <div class="downloads">
+            <a href="https://testflight.apple.com/join/aDbjVwG9" class="btn btn-ios">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Download for iOS
+            </a>
+            <a href="https://github.com/MicroAGI-Labs/app-v2-distribution/releases/latest/download/shift.apk" class="btn btn-android">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67c-.19-.29-.54-.38-.84-.22-.29.16-.4.54-.24.85L6.4 9.48A10.78 10.78 0 002 18h20a10.78 10.78 0 00-4.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/>
+                </svg>
+                Download for Android
+            </a>
+        </div>
+
+        <div class="guides">
+            <div class="guide">
+                <h2>iOS Installation Guide</h2>
+                <ol>
+                    <li>Tap the "Download for iOS" button on your iPhone</li>
+                    <li>If TestFlight isn't installed, you'll be redirected to the App Store — install it first</li>
+                    <li>Return to this page and tap the download button again</li>
+                    <li>Tap "Accept" to join the beta testing program</li>
+                    <li>Tap "Install" to download Shift</li>
+                </ol>
+            </div>
+
+            <div class="guide">
+                <h2>Android Installation Guide</h2>
+                <ol>
+                    <li>Tap the "Download for Android" button to download the APK file</li>
+                    <li>Open the downloaded file from your notifications or file manager</li>
+                    <li>If prompted, allow installation from unknown sources:
+                        Go to Settings &gt; Security (or Apps &amp; notifications) and enable "Install unknown apps" for your browser</li>
+                    <li>Tap "Install" and wait for the installation to complete</li>
+                    <li>Open Shift from your app drawer</li>
+                </ol>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Shift</p>
+        </footer>
+    </div>
+</body>
+</html>
