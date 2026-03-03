@@ -1,207 +1,397 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shift — Download</title>
-    <link rel="icon" type="image/png" href="assets/primary_icon.png">
+    <link rel="icon" type="image/png" href="assets/primary_icon.png" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #1a1a1a;
-            background: #fff;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        color: #1a1a1a;
+        background: #fff;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
 
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
 
-        /* Header */
+      /* Header */
+      .header {
+        text-align: center;
+        padding: 64px 0 48px;
+      }
+
+      .app-icon {
+        width: 96px;
+        height: 96px;
+        border-radius: 22px;
+        margin-bottom: 24px;
+      }
+
+      .header h1 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #555;
+        letter-spacing: -0.01em;
+      }
+
+      /* Download buttons */
+      .downloads {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        padding-bottom: 64px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 28px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        transition: opacity 0.15s ease;
+      }
+
+      .btn:hover {
+        opacity: 0.85;
+      }
+
+      .btn-ios {
+        background: #1f5439;
+        color: #fff;
+      }
+
+      .btn-android {
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      .btn svg {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+      }
+
+      /* Guides */
+      .guides {
+        border-top: 1px solid #e5e5e5;
+        padding: 48px 0;
+      }
+
+      .guide {
+        margin-bottom: 48px;
+      }
+
+      .guide:last-child {
+        margin-bottom: 0;
+      }
+
+      .guide h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #1a1a1a;
+      }
+
+      .guide ol {
+        padding-left: 24px;
+      }
+
+      .guide li {
+        margin-bottom: 12px;
+        color: #444;
+        font-size: 15px;
+      }
+
+      .guide li:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Footer */
+      .footer {
+        border-top: 1px solid #e5e5e5;
+        padding: 32px 0;
+        text-align: center;
+      }
+
+      .footer p {
+        font-size: 13px;
+        color: #999;
+      }
+
+      /* Language picker */
+      .lang-picker {
+        display: flex;
+        justify-content: flex-end;
+        gap: 6px;
+        padding: 16px 0 0;
+      }
+
+      .lang-btn {
+        background: none;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #999;
+        cursor: pointer;
+        font-family: inherit;
+        transition:
+          color 0.15s ease,
+          border-color 0.15s ease;
+      }
+
+      .lang-btn:hover {
+        color: #666;
+      }
+
+      .lang-btn.active {
+        color: #1a1a1a;
+        border-color: #ddd;
+      }
+
+      /* Responsive */
+      @media (max-width: 480px) {
         .header {
-            text-align: center;
-            padding: 64px 0 48px;
+          padding: 48px 0 36px;
         }
 
-        .app-icon {
-            width: 96px;
-            height: 96px;
-            border-radius: 22px;
-            margin-bottom: 24px;
-        }
-
-        .header h1 {
-            font-size: 20px;
-            font-weight: 500;
-            color: #555;
-            letter-spacing: -0.01em;
-        }
-
-        /* Download buttons */
         .downloads {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            padding-bottom: 64px;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 48px;
         }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            transition: opacity 0.15s ease;
+          width: 100%;
+          justify-content: center;
         }
-
-        .btn:hover {
-            opacity: 0.85;
-        }
-
-        .btn-ios {
-            background: #1f5439;
-            color: #fff;
-        }
-
-        .btn-android {
-            background: #1a1a1a;
-            color: #fff;
-        }
-
-        .btn svg {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-        }
-
-        /* Guides */
-        .guides {
-            border-top: 1px solid #e5e5e5;
-            padding: 48px 0;
-        }
-
-        .guide {
-            margin-bottom: 48px;
-        }
-
-        .guide:last-child {
-            margin-bottom: 0;
-        }
-
-        .guide h2 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .guide ol {
-            padding-left: 24px;
-        }
-
-        .guide li {
-            margin-bottom: 12px;
-            color: #444;
-            font-size: 15px;
-        }
-
-        .guide li:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Footer */
-        .footer {
-            border-top: 1px solid #e5e5e5;
-            padding: 32px 0;
-            text-align: center;
-        }
-
-        .footer p {
-            font-size: 13px;
-            color: #999;
-        }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            .header {
-                padding: 48px 0 36px;
-            }
-
-            .downloads {
-                flex-direction: column;
-                align-items: center;
-                padding-bottom: 48px;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header class="header">
-            <img src="assets/primary_icon.png" alt="Shift" class="app-icon">
-            <h1>Get early access to Shift</h1>
-        </header>
+      <div class="lang-picker">
+        <button data-lang="en" class="lang-btn active">EN</button>
+        <button data-lang="hi" class="lang-btn">HI</button>
+        <button data-lang="tr" class="lang-btn">TR</button>
+      </div>
+      <header class="header">
+        <img src="assets/primary_icon.png" alt="Shift" class="app-icon" />
+        <h1 data-i18n="heading">Get early access to Shift</h1>
+      </header>
 
-        <div class="downloads">
-            <a href="https://testflight.apple.com/join/aDbjVwG9" class="btn btn-ios">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                </svg>
-                Download for iOS
-            </a>
-            <a href="https://github.com/MicroAGI-Labs/app-v2-distribution/releases/latest/download/shift.apk" class="btn btn-android">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67c-.19-.29-.54-.38-.84-.22-.29.16-.4.54-.24.85L6.4 9.48A10.78 10.78 0 002 18h20a10.78 10.78 0 00-4.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/>
-                </svg>
-                Download for Android
-            </a>
+      <div class="downloads">
+        <a
+          href="https://testflight.apple.com/join/aDbjVwG9"
+          class="btn btn-ios"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+            />
+          </svg>
+          <span data-i18n="btn_ios">Download for iOS</span>
+        </a>
+        <a
+          href="https://github.com/MicroAGI-Labs/app-v2-distribution/releases/latest/download/shift.apk"
+          class="btn btn-android"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67c-.19-.29-.54-.38-.84-.22-.29.16-.4.54-.24.85L6.4 9.48A10.78 10.78 0 002 18h20a10.78 10.78 0 00-4.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"
+            />
+          </svg>
+          <span data-i18n="btn_android">Download for Android</span>
+        </a>
+      </div>
+
+      <div class="guides">
+        <div class="guide">
+          <h2 data-i18n="guide_ios_title">iOS Installation Guide</h2>
+          <ol>
+            <li data-i18n="guide_ios_1">
+              Tap the "Download for iOS" button on your iPhone
+            </li>
+            <li data-i18n="guide_ios_2">
+              If TestFlight isn't installed, you'll be redirected to the App
+              Store — install it first
+            </li>
+            <li data-i18n="guide_ios_3">
+              Return to this page and tap the download button again
+            </li>
+            <li data-i18n="guide_ios_4">
+              Tap "Accept" to join the beta testing program
+            </li>
+            <li data-i18n="guide_ios_5">Tap "Install" to download Shift</li>
+          </ol>
         </div>
 
-        <div class="guides">
-            <div class="guide">
-                <h2>iOS Installation Guide</h2>
-                <ol>
-                    <li>Tap the "Download for iOS" button on your iPhone</li>
-                    <li>If TestFlight isn't installed, you'll be redirected to the App Store — install it first</li>
-                    <li>Return to this page and tap the download button again</li>
-                    <li>Tap "Accept" to join the beta testing program</li>
-                    <li>Tap "Install" to download Shift</li>
-                </ol>
-            </div>
-
-            <div class="guide">
-                <h2>Android Installation Guide</h2>
-                <ol>
-                    <li>Tap the "Download for Android" button to download the APK file</li>
-                    <li>Open the downloaded file from your notifications or file manager</li>
-                    <li>If prompted, allow installation from unknown sources:
-                        Go to Settings &gt; Security (or Apps &amp; notifications) and enable "Install unknown apps" for your browser</li>
-                    <li>Tap "Install" and wait for the installation to complete</li>
-                    <li>Open Shift from your app drawer</li>
-                </ol>
-            </div>
+        <div class="guide">
+          <h2 data-i18n="guide_android_title">Android Installation Guide</h2>
+          <ol>
+            <li data-i18n="guide_android_1">
+              Tap the "Download for Android" button to download the APK file
+            </li>
+            <li data-i18n="guide_android_2">
+              Open the downloaded file from your notifications or file manager
+            </li>
+            <li data-i18n="guide_android_3">
+              If prompted, allow installation from unknown sources: Go to
+              Settings > Security (or Apps & notifications) and enable "Install
+              unknown apps" for your browser
+            </li>
+            <li data-i18n="guide_android_4">
+              Tap "Install" and wait for the installation to complete
+            </li>
+            <li data-i18n="guide_android_5">Open Shift from your app drawer</li>
+          </ol>
         </div>
+      </div>
 
-        <footer class="footer">
-            <p>Shift</p>
-        </footer>
+      <footer class="footer">
+        <p>Shift</p>
+      </footer>
     </div>
-</body>
+    <script>
+      (function () {
+        var translations = {
+          en: {
+            title: "Shift — Download",
+            heading: "Get early access to Shift",
+            btn_ios: "Download for iOS",
+            btn_android: "Download for Android",
+            guide_ios_title: "iOS Installation Guide",
+            guide_ios_1: 'Tap the "Download for iOS" button on your iPhone',
+            guide_ios_2:
+              "If TestFlight isn't installed, you'll be redirected to the App Store — install it first",
+            guide_ios_3:
+              "Return to this page and tap the download button again",
+            guide_ios_4: 'Tap "Accept" to join the beta testing program',
+            guide_ios_5: 'Tap "Install" to download Shift',
+            guide_android_title: "Android Installation Guide",
+            guide_android_1:
+              'Tap the "Download for Android" button to download the APK file',
+            guide_android_2:
+              "Open the downloaded file from your notifications or file manager",
+            guide_android_3:
+              'If prompted, allow installation from unknown sources: Go to Settings > Security (or Apps & notifications) and enable "Install unknown apps" for your browser',
+            guide_android_4:
+              'Tap "Install" and wait for the installation to complete',
+            guide_android_5: "Open Shift from your app drawer",
+          },
+          hi: {
+            title: "Shift — डाउनलोड",
+            heading: "Shift का शुरुआती एक्सेस पाएं",
+            btn_ios: "iOS के लिए डाउनलोड करें",
+            btn_android: "Android के लिए डाउनलोड करें",
+            guide_ios_title: "iOS इंस्टॉलेशन गाइड",
+            guide_ios_1:
+              'अपने iPhone पर "iOS के लिए डाउनलोड करें" बटन पर टैप करें',
+            guide_ios_2:
+              "अगर TestFlight इंस्टॉल नहीं है, तो आपको App Store पर भेजा जाएगा — पहले उसे इंस्टॉल करें",
+            guide_ios_3: "इस पेज पर वापस आएं और डाउनलोड बटन पर फिर से टैप करें",
+            guide_ios_4:
+              'बीटा टेस्टिंग प्रोग्राम में शामिल होने के लिए "Accept" पर टैप करें',
+            guide_ios_5: 'Shift डाउनलोड करने के लिए "Install" पर टैप करें',
+            guide_android_title: "Android इंस्टॉलेशन गाइड",
+            guide_android_1:
+              'APK फ़ाइल डाउनलोड करने के लिए "Android के लिए डाउनलोड करें" बटन पर टैप करें',
+            guide_android_2:
+              "डाउनलोड की गई फ़ाइल को अपनी नोटिफिकेशन या फ़ाइल मैनेजर से खोलें",
+            guide_android_3:
+              'अगर पूछा जाए, तो अज्ञात स्रोतों से इंस्टॉलेशन की अनुमति दें: Settings > Security (या Apps & notifications) में जाएं और अपने ब्राउज़र के लिए "Install unknown apps" सक्षम करें',
+            guide_android_4:
+              '"Install" पर टैप करें और इंस्टॉलेशन पूरा होने तक प्रतीक्षा करें',
+            guide_android_5: "अपने ऐप ड्रॉअर से Shift खोलें",
+          },
+          tr: {
+            title: "Shift — İndir",
+            heading: "Shift'e erken erişim sağlayın",
+            btn_ios: "iOS için indir",
+            btn_android: "Android için indir",
+            guide_ios_title: "iOS Kurulum Rehberi",
+            guide_ios_1: 'iPhone\'unuzda "iOS için indir" butonuna dokunun',
+            guide_ios_2:
+              "TestFlight yüklü değilse App Store'a yönlendirilirsiniz — önce onu yükleyin",
+            guide_ios_3:
+              "Bu sayfaya geri dönün ve indirme butonuna tekrar dokunun",
+            guide_ios_4:
+              'Beta test programına katılmak için "Accept" seçeneğine dokunun',
+            guide_ios_5: 'Shift\'i indirmek için "Install" seçeneğine dokunun',
+            guide_android_title: "Android Kurulum Rehberi",
+            guide_android_1:
+              'APK dosyasını indirmek için "Android için indir" butonuna dokunun',
+            guide_android_2:
+              "İndirilen dosyayı bildirimlerinizden veya dosya yöneticisinden açın",
+            guide_android_3:
+              'İstenirse, bilinmeyen kaynaklardan yüklemeye izin verin: Settings > Security (veya Apps & notifications) bölümüne gidin ve tarayıcınız için "Install unknown apps" seçeneğini etkinleştirin',
+            guide_android_4:
+              '"Install" butonuna dokunun ve kurulumun tamamlanmasını bekleyin',
+            guide_android_5: "Uygulamalar menüsünden Shift'i açın",
+          },
+        };
+
+        function applyLanguage(lang) {
+          if (!translations[lang]) lang = "en";
+          var t = translations[lang];
+
+          document.querySelectorAll("[data-i18n]").forEach(function (el) {
+            var key = el.getAttribute("data-i18n");
+            if (t[key] !== undefined) el.textContent = t[key];
+          });
+
+          document.documentElement.lang = lang;
+          document.title = t.title;
+
+          document.querySelectorAll(".lang-btn").forEach(function (btn) {
+            btn.classList.toggle(
+              "active",
+              btn.getAttribute("data-lang") === lang,
+            );
+          });
+
+          try {
+            localStorage.setItem("shift-lang", lang);
+          } catch (e) {}
+        }
+
+        document.querySelectorAll(".lang-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            applyLanguage(btn.getAttribute("data-lang"));
+          });
+        });
+
+        var saved = null;
+        try {
+          saved = localStorage.getItem("shift-lang");
+        } catch (e) {}
+        if (saved && translations[saved]) {
+          applyLanguage(saved);
+        } else {
+          var navLang = (navigator.language || "").toLowerCase();
+          if (navLang.startsWith("tr")) applyLanguage("tr");
+          else if (navLang.startsWith("hi")) applyLanguage("hi");
+          else applyLanguage("en");
+        }
+      })();
+    </script>
+  </body>
 </html>
