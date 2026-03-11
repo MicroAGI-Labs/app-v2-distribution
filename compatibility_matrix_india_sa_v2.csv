@@ -1,0 +1,267 @@
+id,brand,name,model number,year,pass
+1,Google,Pixel 9a,Pixel 9a,2025,yes
+2,Hisense,U31,U31,2023,no
+3,Hisense,U70,U70,2024,no
+4,Hisense,U964,U964,2024,no
+5,Honor,X6,X6,2022,no
+6,Honor,90 Lite,90 Lite,2023,yes
+7,Honor,X5,X5,2023,no
+8,Honor,X5 Plus,X5 Plus,2023,no
+9,Honor,X6a,X6a,2023,maybe
+10,Honor,X7a,X7a,2023,maybe
+11,Honor,X7b,X7b,2023,yes
+12,Honor,X8b,X8b,2023,yes
+13,Honor,X9a 5G,X9a 5G,2023,no
+14,Honor,X9b,X9b,2023,yes
+15,Honor,X6b,X6b,2024,yes
+16,Honor,X7c 4G,X7c 4G,2024,yes
+17,Honor,X7c 5G,X7c 5G,2024,no
+18,Honor,X9d 5G,X9d 5G,2025,yes
+19,Huawei,P40 lite,P40 lite,2020,yes
+20,Huawei,Y5p,Y5p,2020,no
+21,Huawei,Y6p,Y6p,2020,no
+22,Huawei,Y7a,Y7a,2020,maybe
+23,Huawei,nova 9 SE,nova 9 SE,2022,yes
+24,Huawei,nova Y61,nova Y61,2022,maybe
+25,Huawei,nova Y72,nova Y72,2024,yes
+26,Infinix,Hot 20i,Hot 20i,2022,no
+27,Infinix,Hot 30,Hot 30,2023,yes
+28,Infinix,Hot 30i,Hot 30i,2023,maybe
+29,Infinix,Hot 40 Pro,Hot 40 Pro,2023,yes
+30,Infinix,Hot 40i,Hot 40i,2023,maybe
+31,Infinix,Note 30,Note 30,2023,yes
+32,Infinix,Smart 7,Smart 7,2023,no
+33,Infinix,Smart 8,Smart 8,2023,maybe
+34,Infinix,Hot 50i,Hot 50i,2024,maybe
+35,Infinix,Note 40,Note 40,2024,yes
+36,Infinix,Smart 9,Smart 9,2024,maybe
+37,Lava,Blaze 5G,Blaze 5G,2022,maybe
+38,Lava,Blaze 2 5G,Blaze 2 5G,2023,maybe
+39,Lava,Blaze X,Blaze X,2024,yes
+40,Lava,Blaze Dragon 5G,Blaze Dragon 5G,2025,no
+41,Mobicel,C2.1,C2.1,2024,no
+42,Mobicel,P9,P9,2025,no
+43,Motorola,One 5G UW,One 5G UW,2020,maybe
+44,Motorola,Moto G60,Moto G60,2021,yes
+45,Motorola,Moto G52,Moto G52,2022,maybe
+46,Motorola,Moto G62 5G,Moto G62 5G,2022,no
+47,Motorola,Moto G71 5G,Moto G71 5G,2022,no
+48,Motorola,Moto G72,Moto G72,2022,yes
+49,Motorola,Moto G82 5G,Moto G82 5G,2022,no
+50,Motorola,Edge 40 Neo,Edge 40 Neo,2023,yes
+51,Motorola,Moto G14,Moto G14,2023,maybe
+52,Motorola,Moto G54 5G,Moto G54 5G,2023,yes
+53,Motorola,Moto G73 5G,Moto G73 5G,2023,yes
+54,Motorola,Moto G84 5G,Moto G84 5G,2023,no
+55,Motorola,Edge 50 Fusion,Edge 50 Fusion,2024,yes
+56,Motorola,Moto G04,Moto G04,2024,no
+57,Motorola,Moto G04s,Moto G04s,2024,no
+58,Motorola,Moto G24 Power,Moto G24 Power,2024,maybe
+59,Motorola,Moto G34 5G,Moto G34 5G,2024,no
+60,Motorola,Moto G45 5G,Moto G45 5G,2024,no
+61,Motorola,Moto G64 5G,Moto G64 5G,2024,yes
+62,Motorola,Moto G85 5G,Moto G85 5G,2024,no
+63,Motorola,Edge 60 Fusion,Edge 60 Fusion,2025,yes
+64,Motorola,Edge 60 Pro,Edge 60 Pro,2025,yes
+65,Motorola,Moto G35 5G,Moto G35 5G,2025,maybe
+66,Motorola,Moto G57 Power,Moto G57 Power,2025,yes
+67,Motorola,Moto G67 Power 5G,Moto G67 Power 5G,2025,yes
+68,Motorola,Moto G96 5G,Moto G96 5G,2025,yes
+69,Nokia,C30,C30,2021,no
+70,Nokia,C21 Plus,C21 Plus,2022,no
+71,OPPO,A15s,A15s,2020,maybe
+72,OPPO,A16,A16,2021,no
+73,OPPO,A16k,A16k,2021,no
+74,OPPO,A54,A54,2021,no
+75,OPPO,A17,A17,2022,no
+76,OPPO,A17k,A17k,2022,no
+77,OPPO,A57,A57,2022,no
+78,OPPO,A18,A18,2023,maybe
+79,OPPO,A38,A38,2023,maybe
+80,OPPO,A58,A58,2023,yes
+81,OPPO,A59 5G,A59 5G,2023,maybe
+82,OPPO,A78 5G,A78 5G,2023,yes
+83,OPPO,A79 5G,A79 5G,2023,yes
+84,OPPO,Reno8 T 5G,Reno8 T 5G,2023,no
+85,OPPO,A3 5G,A3 5G,2024,yes
+86,OPPO,A3 Pro 5G,A3 Pro 5G,2024,yes
+87,OPPO,A3x 5G,A3x 5G,2024,maybe
+88,OPPO,A40,A40,2024,no
+89,OPPO,K12x 5G,K12x 5G,2024,yes
+90,OPPO,A5x 5G,A5x 5G,2025,maybe
+91,OnePlus,Nord CE 2 Lite 5G,Nord CE 2 Lite 5G,2022,no
+92,OnePlus,Nord 3 5G,Nord 3 5G,2023,yes
+93,OnePlus,Nord CE 3 5G,Nord CE 3 5G,2023,yes
+94,OnePlus,Nord CE 3 Lite 5G,Nord CE 3 Lite 5G,2023,no
+95,OnePlus,Nord CE 4,Nord CE 4,2024,yes
+96,OnePlus,Nord CE 4 Lite 5G,Nord CE 4 Lite 5G,2024,no
+97,OnePlus,Nord 5,Nord 5,2025,yes
+98,POCO,M4 Pro 5G,M4 Pro 5G,2021,maybe
+99,POCO,M5,M5,2022,maybe
+100,POCO,X4 Pro 5G,X4 Pro 5G,2022,no
+101,POCO,C50,C50,2023,no
+102,POCO,C51,C51,2023,no
+103,POCO,C55,C55,2023,maybe
+104,POCO,C65,C65,2023,maybe
+105,POCO,M6 5G,M6 5G,2023,maybe
+106,POCO,M6 Pro 5G,M6 Pro 5G,2023,no
+107,POCO,X5 5G,X5 5G,2023,no
+108,POCO,C61,C61,2024,no
+109,POCO,M7 5G,M7 5G,2024,no
+110,POCO,X6 5G,X6 5G,2024,yes
+111,POCO,X6 Pro 5G,X6 Pro 5G,2024,yes
+112,POCO,M7 Plus 5G,M7 Plus 5G,2025,no
+113,Redmi,9,9,2020,no
+114,Redmi,9A,9A,2020,maybe
+115,Redmi,Note 10 Pro,Note 10 Pro,2021,yes
+116,Redmi,Note 10 Pro Max,Note 10 Pro Max,2021,yes
+117,Redmi,Note 11T 5G,Note 11T 5G,2021,yes
+118,Redmi,10A,10A,2022,maybe
+119,Redmi,10C,10C,2022,maybe
+120,Redmi,12C,12C,2022,maybe
+121,Redmi,A1,A1,2022,no
+122,Redmi,Note 11,Note 11,2022,maybe
+123,Redmi,Note 11SE,Note 11SE,2022,maybe
+124,Redmi,12 4G,12 4G,2023,maybe
+125,Redmi,12 5G,12 5G,2023,no
+126,Redmi,13C 4G,13C 4G,2023,maybe
+127,Redmi,13C 5G,13C 5G,2023,maybe
+128,Redmi,A2,A2,2023,no
+129,Redmi,Note 12 4G,Note 12 4G,2023,maybe
+130,Redmi,Note 12 5G,Note 12 5G,2023,no
+131,Redmi,Note 12 Pro 5G,Note 12 Pro 5G,2023,yes
+132,Redmi,13 4G,13 4G,2024,yes
+133,Redmi,13 5G,13 5G,2024,no
+134,Redmi,14C 4G,14C 4G,2024,maybe
+135,Redmi,14C 5G,14C 5G,2024,no
+136,Redmi,A3,A3,2024,maybe
+137,Redmi,A3x,A3x,2024,no
+138,Redmi,A4 5G,A4 5G,2024,no
+139,Redmi,Note 13 4G,Note 13 4G,2024,yes
+140,Redmi,Note 13 5G,Note 13 5G,2024,yes
+141,Redmi,Note 13 Pro 5G,Note 13 Pro 5G,2024,yes
+142,Redmi,Note 14 5G,Note 14 5G,2024,yes
+143,Redmi,Note 14 Pro 5G,Note 14 Pro 5G,2024,yes
+144,Samsung,Galaxy A12,Galaxy A12,2020,no
+145,Samsung,Galaxy A71,Galaxy A71,2020,yes
+146,Samsung,Galaxy M21,Galaxy M21,2020,maybe
+147,Samsung,Galaxy M31,Galaxy M31,2020,yes
+148,Samsung,Galaxy A03 Core,Galaxy A03 Core,2021,no
+149,Samsung,Galaxy A03s,Galaxy A03s,2021,no
+150,Samsung,Galaxy A52s 5G,Galaxy A52s 5G,2021,yes
+151,Samsung,Galaxy M12,Galaxy M12,2021,no
+152,Samsung,Galaxy A04,Galaxy A04,2022,no
+153,Samsung,Galaxy A04e,Galaxy A04e,2022,no
+154,Samsung,Galaxy A04s,Galaxy A04s,2022,no
+155,Samsung,Galaxy A13 4G,Galaxy A13 4G,2022,no
+156,Samsung,Galaxy A23 5G,Galaxy A23 5G,2022,no
+157,Samsung,Galaxy A53 5G,Galaxy A53 5G,2022,yes
+158,Samsung,Galaxy F13,Galaxy F13,2022,no
+159,Samsung,Galaxy M13 4G,Galaxy M13 4G,2022,no
+160,Samsung,Galaxy M13 5G,Galaxy M13 5G,2022,maybe
+161,Samsung,Galaxy Z Fold4,Galaxy Z Fold4,2022,yes
+162,Samsung,Galaxy A05,Galaxy A05,2023,maybe
+163,Samsung,Galaxy A05s,Galaxy A05s,2023,maybe
+164,Samsung,Galaxy A14,Galaxy A14,2023,maybe
+165,Samsung,Galaxy A14 5G,Galaxy A14 5G,2023,maybe
+166,Samsung,Galaxy A24,Galaxy A24,2023,maybe
+167,Samsung,Galaxy A34 5G,Galaxy A34 5G,2023,yes
+168,Samsung,Galaxy A54 5G,Galaxy A54 5G,2023,yes
+169,Samsung,Galaxy F14 5G,Galaxy F14 5G,2023,maybe
+170,Samsung,Galaxy F34 5G,Galaxy F34 5G,2023,yes
+171,Samsung,Galaxy M14 5G,Galaxy M14 5G,2023,maybe
+172,Samsung,Galaxy M34 5G,Galaxy M34 5G,2023,yes
+173,Samsung,Galaxy A06,Galaxy A06,2024,maybe
+174,Samsung,Galaxy A15,Galaxy A15,2024,maybe
+175,Samsung,Galaxy A15 5G,Galaxy A15 5G,2024,maybe
+176,Samsung,Galaxy A16 4G,Galaxy A16 4G,2024,maybe
+177,Samsung,Galaxy A16 5G,Galaxy A16 5G,2024,maybe
+178,Samsung,Galaxy A25 5G,Galaxy A25 5G,2024,yes
+179,Samsung,Galaxy A35,Galaxy A35,2024,yes
+180,Samsung,Galaxy A55,Galaxy A55,2024,yes
+181,Samsung,Galaxy F15 5G,Galaxy F15 5G,2024,maybe
+182,Samsung,Galaxy M15 5G,Galaxy M15 5G,2024,maybe
+183,Samsung,Galaxy M35,Galaxy M35,2024,yes
+184,Samsung,Galaxy S24,Galaxy S24,2024,yes
+185,Samsung,Galaxy S24 Ultra,Galaxy S24 Ultra,2024,yes
+186,Samsung,Galaxy Z Flip6,Galaxy Z Flip6,2024,yes
+187,Samsung,Galaxy A06 5G,Galaxy A06 5G,2025,maybe
+188,Samsung,Galaxy A17 5G,Galaxy A17 5G,2025,maybe
+189,Samsung,Galaxy A26 5G,Galaxy A26 5G,2025,yes
+190,Samsung,Galaxy A36 5G,Galaxy A36 5G,2025,yes
+191,Samsung,Galaxy A56 5G,Galaxy A56 5G,2025,yes
+192,Samsung,Galaxy F17 5G,Galaxy F17 5G,2025,maybe
+193,Tecno,Camon 20,Camon 20,2023,yes
+194,Tecno,Pova 5,Pova 5,2023,yes
+195,Tecno,Pova Neo 3,Pova Neo 3,2023,maybe
+196,Tecno,Spark 10C,Spark 10C,2023,maybe
+197,Tecno,Spark 20,Spark 20,2023,yes
+198,Tecno,Spark 20C,Spark 20C,2023,maybe
+199,Tecno,Spark Go 2023,Spark Go 2023,2023,no
+200,Tecno,Spark Go 2024,Spark Go 2024,2023,maybe
+201,Tecno,Camon 30,Camon 30,2024,yes
+202,Tecno,Spark 20 Pro+,Spark 20 Pro+,2024,yes
+203,ZTE,Blade A35,Blade A35,2024,no
+204,ZTE,Blade A36,Blade A36,2025,no
+205,iQOO,Z6 Lite 5G,Z6 Lite 5G,2022,no
+206,iQOO,Z7s 5G,Z7s 5G,2023,no
+207,iQOO,Z9 5G,Z9 5G,2024,yes
+208,iQOO,Z9x 5G,Z9x 5G,2024,no
+209,itel,A27,A27,2022,no
+210,itel,A49,A49,2022,no
+211,itel,A05s,A05s,2023,no
+212,itel,A60,A60,2023,no
+213,itel,A70,A70,2023,maybe
+214,itel,S23,S23,2023,maybe
+215,itel,A06,A06,2024,no
+216,itel,A80,A80,2024,maybe
+217,itel,P55 5G,P55 5G,2024,yes
+218,realme,C11,C11,2020,no
+219,realme,8,8,2021,maybe
+220,realme,C11 2021,C11 2021,2021,no
+221,realme,C20,C20,2021,no
+222,realme,C21Y,C21Y,2021,no
+223,realme,Narzo 50A,Narzo 50A,2021,maybe
+224,realme,9 5G,9 5G,2022,maybe
+225,realme,C30,C30,2022,no
+226,realme,C31,C31,2022,no
+227,realme,C33,C33,2022,no
+228,realme,C35,C35,2022,maybe
+229,realme,Narzo 50i Prime,Narzo 50i Prime,2022,no
+230,realme,C53,C53,2023,maybe
+231,realme,C55,C55,2023,yes
+232,realme,Narzo 60x 5G,Narzo 60x 5G,2023,maybe
+233,realme,Narzo N53,Narzo N53,2023,maybe
+234,realme,Narzo N55,Narzo N55,2023,maybe
+235,realme,12x 5G,12x 5G,2024,maybe
+236,realme,C61,C61,2024,maybe
+237,realme,Narzo 70x 5G,Narzo 70x 5G,2024,yes
+238,realme,Narzo N65 5G,Narzo N65 5G,2024,maybe
+239,realme,P1 5G,P1 5G,2024,yes
+240,realme,Narzo 80 Lite 5G,Narzo 80 Lite 5G,2025,maybe
+241,vivo,Y21,Y21,2021,maybe
+242,vivo,Y01,Y01,2022,no
+243,vivo,Y02,Y02,2022,no
+244,vivo,Y16,Y16,2022,no
+245,vivo,T2 5G,T2 5G,2023,no
+246,vivo,T2x 5G,T2x 5G,2023,maybe
+247,vivo,V29e 5G,V29e 5G,2023,no
+248,vivo,Y100A,Y100A,2023,no
+249,vivo,Y200 5G,Y200 5G,2023,no
+250,vivo,Y27,Y27,2023,yes
+251,vivo,Y36,Y36,2023,yes
+252,vivo,Y56 5G,Y56 5G,2023,no
+253,vivo,T3 5G,T3 5G,2024,yes
+254,vivo,T3 Lite 5G,T3 Lite 5G,2024,maybe
+255,vivo,T3x 5G,T3x 5G,2024,maybe
+256,vivo,V40 5G,V40 5G,2024,yes
+257,vivo,Y03,Y03,2024,no
+258,vivo,Y18i,Y18i,2024,no
+259,vivo,Y200 Pro 5G,Y200 Pro 5G,2024,no
+260,vivo,Y200e 5G,Y200e 5G,2024,no
+261,vivo,Y28 5G,Y28 5G,2024,maybe
+262,vivo,Y28s 5G,Y28s 5G,2024,maybe
+263,vivo,Y300 Plus 5G,Y300 Plus 5G,2024,no
+264,vivo,T4x 5G,T4x 5G,2025,yes
+265,vivo,Y31 5G,Y31 5G,2025,no
+266,vivo,Y31 Pro 5G,Y31 Pro 5G,2025,yes

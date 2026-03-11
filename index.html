@@ -169,7 +169,6 @@
 
       .version-badge {
         text-align: center;
-        margin-top: -48px;
         margin-bottom: 48px;
         font-size: 13px;
         color: #888;
@@ -180,6 +179,311 @@
       }
       .version-badge a:hover {
         text-decoration: underline;
+      }
+
+      .ios-compat-note {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: -52px;
+        margin-bottom: 16px;
+        font-size: 13px;
+        color: #888;
+      }
+
+      .compat-sep {
+        color: #ccc;
+      }
+
+      .link-btn {
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: inherit;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .link-btn:hover {
+        color: #1a1a1a;
+      }
+
+      /* Saved device bar */
+      .saved-device-bar {
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: #444;
+        display: none;
+      }
+
+      .saved-device-bar.visible {
+        display: block;
+      }
+
+      .saved-device-bar .device-label {
+        font-weight: 600;
+      }
+
+      .saved-device-bar .change-btn {
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 13px;
+        cursor: pointer;
+        font-family: inherit;
+        text-decoration: underline;
+        margin-left: 6px;
+      }
+
+      .saved-device-bar .change-btn:hover {
+        color: #1a1a1a;
+      }
+
+      /* Modal */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: none;
+        animation: fadeIn 0.2s ease;
+      }
+
+      .modal-overlay.open {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .modal {
+        background: #fff;
+        width: 100%;
+        max-height: 85vh;
+        border-radius: 16px 16px 0 0;
+        display: flex;
+        flex-direction: column;
+        animation: slideUp 0.3s ease;
+      }
+
+      .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 12px;
+        border-bottom: 1px solid #eee;
+        flex-shrink: 0;
+      }
+
+      .modal-header h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #999;
+        cursor: pointer;
+        padding: 4px 8px;
+        line-height: 1;
+      }
+
+      .modal-close:hover {
+        color: #1a1a1a;
+      }
+
+      .modal-search {
+        padding: 12px 20px;
+        flex-shrink: 0;
+      }
+
+      .modal-search input {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 15px;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.15s ease;
+      }
+
+      .modal-search input:focus {
+        border-color: #999;
+      }
+
+      .device-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 0 20px 20px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .device-brand-header {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        padding: 12px 0 6px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        z-index: 1;
+      }
+
+      .device-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+        cursor: pointer;
+        transition: background 0.1s ease;
+      }
+
+      .device-item:hover {
+        background: #fafafa;
+      }
+
+      .device-item.saved {
+        background: #f0faf4;
+      }
+
+      .device-name {
+        font-size: 15px;
+        color: #1a1a1a;
+      }
+
+      .device-badge {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 99px;
+        flex-shrink: 0;
+      }
+
+      .device-badge.compatible {
+        background: #e8f5e9;
+        color: #2e7d32;
+      }
+
+      .device-badge.not-compatible {
+        background: #fbe9e7;
+        color: #c62828;
+      }
+
+      .device-badge.maybe {
+        background: #fff8e1;
+        color: #f57f17;
+      }
+
+      .no-results {
+        text-align: center;
+        padding: 32px 0;
+        color: #999;
+        font-size: 14px;
+      }
+
+      .help-section {
+        padding: 12px 20px 20px;
+        border-top: 1px solid #eee;
+        flex-shrink: 0;
+      }
+
+      .help-section summary {
+        font-size: 14px;
+        font-weight: 500;
+        color: #666;
+        cursor: pointer;
+        padding: 8px 0;
+      }
+
+      .help-section summary:hover {
+        color: #1a1a1a;
+      }
+
+      .help-section ol {
+        padding-left: 20px;
+        margin-top: 8px;
+      }
+
+      .help-section li {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 6px;
+        line-height: 1.5;
+      }
+
+      .device-result {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 20px;
+        text-align: center;
+      }
+      .device-result.visible { display: flex; }
+
+      .result-icon {
+        width: 64px; height: 64px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        margin-bottom: 20px;
+      }
+      .result-icon.success { background: #e8f5e9; }
+      .result-icon.error   { background: #fbe9e7; }
+      .result-icon.maybe   { background: #fff8e1; }
+      .result-icon.unlisted { background: #f5f5f5; }
+      .result-icon svg { width: 32px; height: 32px; }
+      .result-icon.success svg { color: #2e7d32; }
+      .result-icon.error svg   { color: #c62828; }
+      .result-icon.maybe svg   { color: #f57f17; }
+      .result-icon.unlisted svg { color: #757575; }
+
+      .result-title { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+      .result-device-name { font-size: 15px; color: #666; margin-bottom: 4px; }
+      .result-message { font-size: 14px; color: #999; margin-bottom: 24px; }
+
+      .result-download-btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 12px 32px; background: #1a1a1a; color: #fff;
+        border: none; border-radius: 10px; font-size: 15px; font-weight: 600;
+        cursor: pointer; font-family: inherit; text-decoration: none;
+        transition: opacity 0.15s ease;
+      }
+      .result-download-btn:hover { opacity: 0.85; }
+
+      .modal-back {
+        background: none; border: none; font-size: 18px; color: #666;
+        cursor: pointer; padding: 4px 8px; font-family: inherit; display: none;
+      }
+      .modal-back:hover { color: #1a1a1a; }
+      .modal-back.visible { display: inline-block; }
+
+      .device-item.not-listed {
+        border-top: 1px solid #e0e0e0;
+        margin-top: 8px;
+        padding-top: 16px;
+        justify-content: center;
+        color: #666;
+        font-size: 14px;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes slideUp {
+        from { transform: translateY(100%); }
+        to { transform: translateY(0); }
       }
 
       /* Responsive */
@@ -197,6 +501,23 @@
         .btn {
           width: 100%;
           justify-content: center;
+        }
+
+        .ios-compat-note {
+          margin-top: -36px;
+          flex-wrap: wrap;
+        }
+      }
+
+      @media (min-width: 481px) {
+        .modal-overlay.open {
+          align-items: center;
+        }
+
+        .modal {
+          max-width: 480px;
+          border-radius: 16px;
+          max-height: 70vh;
         }
       }
     </style>
@@ -236,6 +557,15 @@
           </svg>
           <span data-i18n="btn_android">Download for Android</span>
         </a>
+      </div>
+      <div class="ios-compat-note">
+        <span data-i18n="ios_compat_note">All iPhones with iOS 18.6 or above are supported</span>
+        <span class="compat-sep">·</span>
+        <button class="link-btn" id="compat-link-btn" data-i18n="btn_compatible_devices">Compatible Devices</button>
+      </div>
+      <div class="saved-device-bar" id="saved-device-bar">
+        <span class="device-label" id="saved-device-label"></span>
+        <button class="change-btn" id="change-device-btn" data-i18n="change_device">Change</button>
       </div>
       <div class="version-badge" id="version-badge"></div>
 
@@ -286,6 +616,43 @@
         <p>Shift</p>
       </footer>
     </div>
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <button class="modal-back" id="modal-back">&larr;</button>
+            <h2 id="modal-title" data-i18n="modal_title_compat">Compatible Devices</h2>
+          </div>
+          <button class="modal-close" id="modal-close">&times;</button>
+        </div>
+        <div class="modal-search">
+          <input type="text" id="device-search" data-i18n-placeholder="search_placeholder" placeholder="Search devices..." />
+        </div>
+        <div class="device-list" id="device-list"></div>
+        <div class="device-result" id="device-result">
+          <div class="result-icon" id="result-icon"></div>
+          <div class="result-title" id="result-title"></div>
+          <div class="result-device-name" id="result-device-name"></div>
+          <div class="result-message" id="result-message"></div>
+          <a class="result-download-btn" id="result-download-btn" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            <span id="result-download-text">Download APK</span>
+          </a>
+        </div>
+        <div class="help-section">
+          <details>
+            <summary data-i18n="help_find_model">How do I find my phone model?</summary>
+            <ol>
+              <li data-i18n="help_step_1">Open Settings on your phone</li>
+              <li data-i18n="help_step_2">Tap "About phone" or "About device"</li>
+              <li data-i18n="help_step_3">Look for "Model name" or "Model number"</li>
+              <li data-i18n="help_step_4">Match it with the list above</li>
+            </ol>
+          </details>
+        </div>
+      </div>
+    </div>
+
     <script>
       (function () {
         var translations = {
@@ -312,6 +679,32 @@
             guide_android_4:
               'Tap "Install" and wait for the installation to complete',
             guide_android_5: "Open Shift from your app drawer",
+            btn_compatible_devices: "Compatible Android Devices",
+            modal_title_compat: "Compatible Android Devices",
+            modal_title_select: "Select Your Phone",
+            search_placeholder: "Search devices...",
+            badge_compatible: "Likely Compatible",
+            badge_not_compatible: "Not Supported",
+            badge_maybe: "Requires additional information",
+            no_results: "No devices found",
+            help_find_model: "How do I find my phone model?",
+            help_step_1: "Open Settings on your phone",
+            help_step_2: 'Tap "About phone" or "About device"',
+            help_step_3: 'Look for "Model name" or "Model number"',
+            help_step_4: "Match it with the list above",
+            change_device: "Change",
+            success_compatible_title: "Likely Compatible",
+            success_compatible_msg: "Your device is likely compatible! We will confirm this inside the app.",
+            success_not_compatible_title: "Not Supported",
+            success_not_compatible_msg: "Your device is not supported",
+            success_maybe_title: "Requires additional information",
+            success_maybe_msg: "We will confirm device compatibility inside the application.",
+            success_unlisted_title: "Device Not Listed",
+            success_unlisted_msg: "We will verify the device compatibility inside the app.",
+            not_listed_btn: "My device is not listed",
+            success_download_btn: "Download APK",
+            success_back: "Back",
+            ios_compat_note: "All iPhones with iOS 18.6 or above are supported",
           },
           hi: {
             title: "Shift — डाउनलोड",
@@ -337,6 +730,32 @@
             guide_android_4:
               '"Install" पर टैप करें और इंस्टॉलेशन पूरा होने तक प्रतीक्षा करें',
             guide_android_5: "अपने ऐप ड्रॉअर से Shift खोलें",
+            btn_compatible_devices: "संगत Android डिवाइस",
+            modal_title_compat: "संगत Android डिवाइस",
+            modal_title_select: "अपना फ़ोन चुनें",
+            search_placeholder: "डिवाइस खोजें...",
+            badge_compatible: "संभवतः संगत",
+            badge_not_compatible: "समर्थित नहीं",
+            badge_maybe: "अतिरिक्त जानकारी आवश्यक",
+            no_results: "कोई डिवाइस नहीं मिला",
+            help_find_model: "अपने फ़ोन का मॉडल कैसे जानें?",
+            help_step_1: "अपने फ़ोन पर Settings खोलें",
+            help_step_2: '"About phone" या "About device" पर टैप करें',
+            help_step_3: '"Model name" या "Model number" देखें',
+            help_step_4: "इसे ऊपर दी गई सूची से मिलाएं",
+            change_device: "बदलें",
+            success_compatible_title: "संभवतः संगत",
+            success_compatible_msg: "आपका डिवाइस संगत हो सकता है! हम इसकी पुष्टि ऐप में करेंगे।",
+            success_not_compatible_title: "समर्थित नहीं",
+            success_not_compatible_msg: "आपका डिवाइस समर्थित नहीं है",
+            success_maybe_title: "अतिरिक्त जानकारी आवश्यक",
+            success_maybe_msg: "हम ऐप के अंदर डिवाइस की संगतता की पुष्टि करेंगे।",
+            success_unlisted_title: "डिवाइस सूची में नहीं",
+            success_unlisted_msg: "हम ऐप के अंदर डिवाइस की संगतता की पुष्टि करेंगे।",
+            not_listed_btn: "मेरा डिवाइस सूची में नहीं है",
+            success_download_btn: "APK डाउनलोड करें",
+            success_back: "वापस",
+            ios_compat_note: "iOS 18.6 या उससे ऊपर वाले सभी iPhones समर्थित हैं",
           },
           tr: {
             title: "Shift — İndir",
@@ -362,8 +781,36 @@
             guide_android_4:
               '"Install" butonuna dokunun ve kurulumun tamamlanmasını bekleyin',
             guide_android_5: "Uygulamalar menüsünden Shift'i açın",
+            btn_compatible_devices: "Uyumlu Android Cihazlar",
+            modal_title_compat: "Uyumlu Android Cihazlar",
+            modal_title_select: "Telefonunuzu Seçin",
+            search_placeholder: "Cihaz ara...",
+            badge_compatible: "Muhtemelen Uyumlu",
+            badge_not_compatible: "Desteklenmiyor",
+            badge_maybe: "Ek bilgi gerekli",
+            no_results: "Cihaz bulunamadı",
+            help_find_model: "Telefon modelimi nasıl bulurum?",
+            help_step_1: "Telefonunuzda Ayarlar'ı açın",
+            help_step_2: '"Telefon hakkında" veya "Cihaz hakkında" seçeneğine dokunun',
+            help_step_3: '"Model adı" veya "Model numarası" bilgisini bulun',
+            help_step_4: "Yukarıdaki listeyle eşleştirin",
+            change_device: "Değiştir",
+            success_compatible_title: "Muhtemelen Uyumlu",
+            success_compatible_msg: "Cihazınız muhtemelen uyumlu! Bunu uygulama içinde doğrulayacağız.",
+            success_not_compatible_title: "Desteklenmiyor",
+            success_not_compatible_msg: "Cihazınız desteklenmiyor",
+            success_maybe_title: "Ek bilgi gerekli",
+            success_maybe_msg: "Cihaz uyumluluğunu uygulama içinde doğrulayacağız.",
+            success_unlisted_title: "Cihaz Listede Yok",
+            success_unlisted_msg: "Cihaz uyumluluğunu uygulama içinde doğrulayacağız.",
+            not_listed_btn: "Cihazım listede yok",
+            success_download_btn: "APK İndir",
+            success_back: "Geri",
+            ios_compat_note: "iOS 18.6 veya üzeri tüm iPhone'lar desteklenmektedir",
           },
         };
+
+        window.__shiftTranslations = translations;
 
         function applyLanguage(lang) {
           if (!translations[lang]) lang = "en";
@@ -372,6 +819,11 @@
           document.querySelectorAll("[data-i18n]").forEach(function (el) {
             var key = el.getAttribute("data-i18n");
             if (t[key] !== undefined) el.textContent = t[key];
+          });
+
+          document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+            var key = el.getAttribute("data-i18n-placeholder");
+            if (t[key] !== undefined) el.placeholder = t[key];
           });
 
           document.documentElement.lang = lang;
@@ -406,6 +858,602 @@
           if (navLang.startsWith("tr")) applyLanguage("tr");
           else if (navLang.startsWith("hi")) applyLanguage("hi");
           else applyLanguage("en");
+        }
+      })();
+
+      // Compatible Devices feature
+      (function () {
+        var APK_URL = 'https://github.com/MicroAGI-Labs/app-v2-distribution/releases/latest/download/shift.apk';
+
+        var DEVICES = [
+          { brand: 'Google', model: 'Pixel 9a', pass: 'yes' },
+          { brand: 'Hisense', model: 'U31', pass: 'no' },
+          { brand: 'Hisense', model: 'U70', pass: 'no' },
+          { brand: 'Hisense', model: 'U964', pass: 'no' },
+          { brand: 'Honor', model: 'X6', pass: 'no' },
+          { brand: 'Honor', model: '90 Lite', pass: 'yes' },
+          { brand: 'Honor', model: 'X5', pass: 'no' },
+          { brand: 'Honor', model: 'X5 Plus', pass: 'no' },
+          { brand: 'Honor', model: 'X6a', pass: 'maybe' },
+          { brand: 'Honor', model: 'X7a', pass: 'maybe' },
+          { brand: 'Honor', model: 'X7b', pass: 'yes' },
+          { brand: 'Honor', model: 'X8b', pass: 'yes' },
+          { brand: 'Honor', model: 'X9a 5G', pass: 'no' },
+          { brand: 'Honor', model: 'X9b', pass: 'yes' },
+          { brand: 'Honor', model: 'X6b', pass: 'yes' },
+          { brand: 'Honor', model: 'X7c 4G', pass: 'yes' },
+          { brand: 'Honor', model: 'X7c 5G', pass: 'no' },
+          { brand: 'Honor', model: 'X9d 5G', pass: 'yes' },
+          { brand: 'Huawei', model: 'P40 lite', pass: 'yes' },
+          { brand: 'Huawei', model: 'Y5p', pass: 'no' },
+          { brand: 'Huawei', model: 'Y6p', pass: 'no' },
+          { brand: 'Huawei', model: 'Y7a', pass: 'maybe' },
+          { brand: 'Huawei', model: 'nova 9 SE', pass: 'yes' },
+          { brand: 'Huawei', model: 'nova Y61', pass: 'maybe' },
+          { brand: 'Huawei', model: 'nova Y72', pass: 'yes' },
+          { brand: 'Infinix', model: 'Hot 20i', pass: 'no' },
+          { brand: 'Infinix', model: 'Hot 30', pass: 'yes' },
+          { brand: 'Infinix', model: 'Hot 30i', pass: 'maybe' },
+          { brand: 'Infinix', model: 'Hot 40 Pro', pass: 'yes' },
+          { brand: 'Infinix', model: 'Hot 40i', pass: 'maybe' },
+          { brand: 'Infinix', model: 'Note 30', pass: 'yes' },
+          { brand: 'Infinix', model: 'Smart 7', pass: 'no' },
+          { brand: 'Infinix', model: 'Smart 8', pass: 'maybe' },
+          { brand: 'Infinix', model: 'Hot 50i', pass: 'maybe' },
+          { brand: 'Infinix', model: 'Note 40', pass: 'yes' },
+          { brand: 'Infinix', model: 'Smart 9', pass: 'maybe' },
+          { brand: 'Lava', model: 'Blaze 5G', pass: 'maybe' },
+          { brand: 'Lava', model: 'Blaze 2 5G', pass: 'maybe' },
+          { brand: 'Lava', model: 'Blaze X', pass: 'yes' },
+          { brand: 'Lava', model: 'Blaze Dragon 5G', pass: 'no' },
+          { brand: 'Mobicel', model: 'C2.1', pass: 'no' },
+          { brand: 'Mobicel', model: 'P9', pass: 'no' },
+          { brand: 'Motorola', model: 'One 5G UW', pass: 'maybe' },
+          { brand: 'Motorola', model: 'Moto G60', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G52', pass: 'maybe' },
+          { brand: 'Motorola', model: 'Moto G62 5G', pass: 'no' },
+          { brand: 'Motorola', model: 'Moto G71 5G', pass: 'no' },
+          { brand: 'Motorola', model: 'Moto G72', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G82 5G', pass: 'no' },
+          { brand: 'Motorola', model: 'Edge 40 Neo', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G14', pass: 'maybe' },
+          { brand: 'Motorola', model: 'Moto G54 5G', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G73 5G', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G84 5G', pass: 'no' },
+          { brand: 'Motorola', model: 'Edge 50 Fusion', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G04', pass: 'no' },
+          { brand: 'Motorola', model: 'Moto G04s', pass: 'no' },
+          { brand: 'Motorola', model: 'Moto G24 Power', pass: 'maybe' },
+          { brand: 'Motorola', model: 'Moto G34 5G', pass: 'no' },
+          { brand: 'Motorola', model: 'Moto G45 5G', pass: 'no' },
+          { brand: 'Motorola', model: 'Moto G64 5G', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G85 5G', pass: 'no' },
+          { brand: 'Motorola', model: 'Edge 60 Fusion', pass: 'yes' },
+          { brand: 'Motorola', model: 'Edge 60 Pro', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G35 5G', pass: 'maybe' },
+          { brand: 'Motorola', model: 'Moto G57 Power', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G67 Power 5G', pass: 'yes' },
+          { brand: 'Motorola', model: 'Moto G96 5G', pass: 'yes' },
+          { brand: 'Nokia', model: 'C30', pass: 'no' },
+          { brand: 'Nokia', model: 'C21 Plus', pass: 'no' },
+          { brand: 'OPPO', model: 'A15s', pass: 'maybe' },
+          { brand: 'OPPO', model: 'A16', pass: 'no' },
+          { brand: 'OPPO', model: 'A16k', pass: 'no' },
+          { brand: 'OPPO', model: 'A54', pass: 'no' },
+          { brand: 'OPPO', model: 'A17', pass: 'no' },
+          { brand: 'OPPO', model: 'A17k', pass: 'no' },
+          { brand: 'OPPO', model: 'A57', pass: 'no' },
+          { brand: 'OPPO', model: 'A18', pass: 'maybe' },
+          { brand: 'OPPO', model: 'A38', pass: 'maybe' },
+          { brand: 'OPPO', model: 'A58', pass: 'yes' },
+          { brand: 'OPPO', model: 'A59 5G', pass: 'maybe' },
+          { brand: 'OPPO', model: 'A78 5G', pass: 'yes' },
+          { brand: 'OPPO', model: 'A79 5G', pass: 'yes' },
+          { brand: 'OPPO', model: 'Reno8 T 5G', pass: 'no' },
+          { brand: 'OPPO', model: 'A3 5G', pass: 'yes' },
+          { brand: 'OPPO', model: 'A3 Pro 5G', pass: 'yes' },
+          { brand: 'OPPO', model: 'A3x 5G', pass: 'maybe' },
+          { brand: 'OPPO', model: 'A40', pass: 'no' },
+          { brand: 'OPPO', model: 'K12x 5G', pass: 'yes' },
+          { brand: 'OPPO', model: 'A5x 5G', pass: 'maybe' },
+          { brand: 'OnePlus', model: 'Nord CE 2 Lite 5G', pass: 'no' },
+          { brand: 'OnePlus', model: 'Nord 3 5G', pass: 'yes' },
+          { brand: 'OnePlus', model: 'Nord CE 3 5G', pass: 'yes' },
+          { brand: 'OnePlus', model: 'Nord CE 3 Lite 5G', pass: 'no' },
+          { brand: 'OnePlus', model: 'Nord CE 4', pass: 'yes' },
+          { brand: 'OnePlus', model: 'Nord CE 4 Lite 5G', pass: 'no' },
+          { brand: 'OnePlus', model: 'Nord 5', pass: 'yes' },
+          { brand: 'POCO', model: 'M4 Pro 5G', pass: 'maybe' },
+          { brand: 'POCO', model: 'M5', pass: 'maybe' },
+          { brand: 'POCO', model: 'X4 Pro 5G', pass: 'no' },
+          { brand: 'POCO', model: 'C50', pass: 'no' },
+          { brand: 'POCO', model: 'C51', pass: 'no' },
+          { brand: 'POCO', model: 'C55', pass: 'maybe' },
+          { brand: 'POCO', model: 'C65', pass: 'maybe' },
+          { brand: 'POCO', model: 'M6 5G', pass: 'maybe' },
+          { brand: 'POCO', model: 'M6 Pro 5G', pass: 'no' },
+          { brand: 'POCO', model: 'X5 5G', pass: 'no' },
+          { brand: 'POCO', model: 'C61', pass: 'no' },
+          { brand: 'POCO', model: 'M7 5G', pass: 'no' },
+          { brand: 'POCO', model: 'X6 5G', pass: 'yes' },
+          { brand: 'POCO', model: 'X6 Pro 5G', pass: 'yes' },
+          { brand: 'POCO', model: 'M7 Plus 5G', pass: 'no' },
+          { brand: 'Redmi', model: '9', pass: 'no' },
+          { brand: 'Redmi', model: '9A', pass: 'maybe' },
+          { brand: 'Redmi', model: 'Note 10 Pro', pass: 'yes' },
+          { brand: 'Redmi', model: 'Note 10 Pro Max', pass: 'yes' },
+          { brand: 'Redmi', model: 'Note 11T 5G', pass: 'yes' },
+          { brand: 'Redmi', model: '10A', pass: 'maybe' },
+          { brand: 'Redmi', model: '10C', pass: 'maybe' },
+          { brand: 'Redmi', model: '12C', pass: 'maybe' },
+          { brand: 'Redmi', model: 'A1', pass: 'no' },
+          { brand: 'Redmi', model: 'Note 11', pass: 'maybe' },
+          { brand: 'Redmi', model: 'Note 11SE', pass: 'maybe' },
+          { brand: 'Redmi', model: '12 4G', pass: 'maybe' },
+          { brand: 'Redmi', model: '12 5G', pass: 'no' },
+          { brand: 'Redmi', model: '13C 4G', pass: 'maybe' },
+          { brand: 'Redmi', model: '13C 5G', pass: 'maybe' },
+          { brand: 'Redmi', model: 'A2', pass: 'no' },
+          { brand: 'Redmi', model: 'Note 12 4G', pass: 'maybe' },
+          { brand: 'Redmi', model: 'Note 12 5G', pass: 'no' },
+          { brand: 'Redmi', model: 'Note 12 Pro 5G', pass: 'yes' },
+          { brand: 'Redmi', model: '13 4G', pass: 'yes' },
+          { brand: 'Redmi', model: '13 5G', pass: 'no' },
+          { brand: 'Redmi', model: '14C 4G', pass: 'maybe' },
+          { brand: 'Redmi', model: '14C 5G', pass: 'no' },
+          { brand: 'Redmi', model: 'A3', pass: 'maybe' },
+          { brand: 'Redmi', model: 'A3x', pass: 'no' },
+          { brand: 'Redmi', model: 'A4 5G', pass: 'no' },
+          { brand: 'Redmi', model: 'Note 13 4G', pass: 'yes' },
+          { brand: 'Redmi', model: 'Note 13 5G', pass: 'yes' },
+          { brand: 'Redmi', model: 'Note 13 Pro 5G', pass: 'yes' },
+          { brand: 'Redmi', model: 'Note 14 5G', pass: 'yes' },
+          { brand: 'Redmi', model: 'Note 14 Pro 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A12', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A71', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy M21', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy M31', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A03 Core', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A03s', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A52s 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy M12', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A04', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A04e', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A04s', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A13 4G', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A23 5G', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy A53 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy F13', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy M13 4G', pass: 'no' },
+          { brand: 'Samsung', model: 'Galaxy M13 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy Z Fold4', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A05', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A05s', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A14', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A14 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A24', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A34 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A54 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy F14 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy F34 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy M14 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy M34 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A06', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A15', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A15 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A16 4G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A16 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A25 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A35', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A55', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy F15 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy M15 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy M35', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy S24', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy S24 Ultra', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy Z Flip6', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A06 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A17 5G', pass: 'maybe' },
+          { brand: 'Samsung', model: 'Galaxy A26 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A36 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy A56 5G', pass: 'yes' },
+          { brand: 'Samsung', model: 'Galaxy F17 5G', pass: 'maybe' },
+          { brand: 'Tecno', model: 'Camon 20', pass: 'yes' },
+          { brand: 'Tecno', model: 'Pova 5', pass: 'yes' },
+          { brand: 'Tecno', model: 'Pova Neo 3', pass: 'maybe' },
+          { brand: 'Tecno', model: 'Spark 10C', pass: 'maybe' },
+          { brand: 'Tecno', model: 'Spark 20', pass: 'yes' },
+          { brand: 'Tecno', model: 'Spark 20C', pass: 'maybe' },
+          { brand: 'Tecno', model: 'Spark Go 2023', pass: 'no' },
+          { brand: 'Tecno', model: 'Spark Go 2024', pass: 'maybe' },
+          { brand: 'Tecno', model: 'Camon 30', pass: 'yes' },
+          { brand: 'Tecno', model: 'Spark 20 Pro+', pass: 'yes' },
+          { brand: 'ZTE', model: 'Blade A35', pass: 'no' },
+          { brand: 'ZTE', model: 'Blade A36', pass: 'no' },
+          { brand: 'iQOO', model: 'Z6 Lite 5G', pass: 'no' },
+          { brand: 'iQOO', model: 'Z7s 5G', pass: 'no' },
+          { brand: 'iQOO', model: 'Z9 5G', pass: 'yes' },
+          { brand: 'iQOO', model: 'Z9x 5G', pass: 'no' },
+          { brand: 'itel', model: 'A27', pass: 'no' },
+          { brand: 'itel', model: 'A49', pass: 'no' },
+          { brand: 'itel', model: 'A05s', pass: 'no' },
+          { brand: 'itel', model: 'A60', pass: 'no' },
+          { brand: 'itel', model: 'A70', pass: 'maybe' },
+          { brand: 'itel', model: 'S23', pass: 'maybe' },
+          { brand: 'itel', model: 'A06', pass: 'no' },
+          { brand: 'itel', model: 'A80', pass: 'maybe' },
+          { brand: 'itel', model: 'P55 5G', pass: 'yes' },
+          { brand: 'realme', model: 'C11', pass: 'no' },
+          { brand: 'realme', model: '8', pass: 'maybe' },
+          { brand: 'realme', model: 'C11 2021', pass: 'no' },
+          { brand: 'realme', model: 'C20', pass: 'no' },
+          { brand: 'realme', model: 'C21Y', pass: 'no' },
+          { brand: 'realme', model: 'Narzo 50A', pass: 'maybe' },
+          { brand: 'realme', model: '9 5G', pass: 'maybe' },
+          { brand: 'realme', model: 'C30', pass: 'no' },
+          { brand: 'realme', model: 'C31', pass: 'no' },
+          { brand: 'realme', model: 'C33', pass: 'no' },
+          { brand: 'realme', model: 'C35', pass: 'maybe' },
+          { brand: 'realme', model: 'Narzo 50i Prime', pass: 'no' },
+          { brand: 'realme', model: 'C53', pass: 'maybe' },
+          { brand: 'realme', model: 'C55', pass: 'yes' },
+          { brand: 'realme', model: 'Narzo 60x 5G', pass: 'maybe' },
+          { brand: 'realme', model: 'Narzo N53', pass: 'maybe' },
+          { brand: 'realme', model: 'Narzo N55', pass: 'maybe' },
+          { brand: 'realme', model: '12x 5G', pass: 'maybe' },
+          { brand: 'realme', model: 'C61', pass: 'maybe' },
+          { brand: 'realme', model: 'Narzo 70x 5G', pass: 'yes' },
+          { brand: 'realme', model: 'Narzo N65 5G', pass: 'maybe' },
+          { brand: 'realme', model: 'P1 5G', pass: 'yes' },
+          { brand: 'realme', model: 'Narzo 80 Lite 5G', pass: 'maybe' },
+          { brand: 'vivo', model: 'Y21', pass: 'maybe' },
+          { brand: 'vivo', model: 'Y01', pass: 'no' },
+          { brand: 'vivo', model: 'Y02', pass: 'no' },
+          { brand: 'vivo', model: 'Y16', pass: 'no' },
+          { brand: 'vivo', model: 'T2 5G', pass: 'no' },
+          { brand: 'vivo', model: 'T2x 5G', pass: 'maybe' },
+          { brand: 'vivo', model: 'V29e 5G', pass: 'no' },
+          { brand: 'vivo', model: 'Y100A', pass: 'no' },
+          { brand: 'vivo', model: 'Y200 5G', pass: 'no' },
+          { brand: 'vivo', model: 'Y27', pass: 'yes' },
+          { brand: 'vivo', model: 'Y36', pass: 'yes' },
+          { brand: 'vivo', model: 'Y56 5G', pass: 'no' },
+          { brand: 'vivo', model: 'T3 5G', pass: 'yes' },
+          { brand: 'vivo', model: 'T3 Lite 5G', pass: 'maybe' },
+          { brand: 'vivo', model: 'T3x 5G', pass: 'maybe' },
+          { brand: 'vivo', model: 'V40 5G', pass: 'yes' },
+          { brand: 'vivo', model: 'Y03', pass: 'no' },
+          { brand: 'vivo', model: 'Y18i', pass: 'no' },
+          { brand: 'vivo', model: 'Y200 Pro 5G', pass: 'no' },
+          { brand: 'vivo', model: 'Y200e 5G', pass: 'no' },
+          { brand: 'vivo', model: 'Y28 5G', pass: 'maybe' },
+          { brand: 'vivo', model: 'Y28s 5G', pass: 'maybe' },
+          { brand: 'vivo', model: 'Y300 Plus 5G', pass: 'no' },
+          { brand: 'vivo', model: 'T4x 5G', pass: 'yes' },
+          { brand: 'vivo', model: 'Y31 5G', pass: 'no' },
+          { brand: 'vivo', model: 'Y31 Pro 5G', pass: 'yes' },
+        ];
+
+        var pendingDownload = false;
+        var scrollY = 0;
+
+        function saveDevice(idx) {
+          try {
+            var d = DEVICES[idx];
+            localStorage.setItem('shift-device', JSON.stringify({ brand: d.brand, model: d.model, index: idx }));
+          } catch (e) {}
+        }
+
+        function loadSavedDevice() {
+          try {
+            var raw = localStorage.getItem('shift-device');
+            if (!raw) return null;
+            var data = JSON.parse(raw);
+            if (data && typeof data.index === 'number' && DEVICES[data.index] &&
+                DEVICES[data.index].brand === data.brand && DEVICES[data.index].model === data.model) {
+              return data;
+            }
+          } catch (e) {}
+          return null;
+        }
+
+        function clearSavedDevice() {
+          try { localStorage.removeItem('shift-device'); } catch (e) {}
+        }
+
+        function getCurrentLang() {
+          var active = document.querySelector('.lang-btn.active');
+          return active ? active.getAttribute('data-lang') : 'en';
+        }
+
+        function t(key) {
+          var lang = getCurrentLang();
+          var translations = window.__shiftTranslations;
+          return (translations[lang] && translations[lang][key]) || (translations.en && translations.en[key]) || key;
+        }
+
+        function updateSavedDeviceBar() {
+          var bar = document.getElementById('saved-device-bar');
+          var label = document.getElementById('saved-device-label');
+          var saved = loadSavedDevice();
+          if (saved) {
+            label.textContent = saved.brand + ' ' + saved.model;
+            bar.classList.add('visible');
+          } else {
+            bar.classList.remove('visible');
+          }
+        }
+
+        function lockScroll() {
+          scrollY = window.pageYOffset;
+          document.body.style.position = 'fixed';
+          document.body.style.top = '-' + scrollY + 'px';
+          document.body.style.left = '0';
+          document.body.style.right = '0';
+        }
+
+        function unlockScroll() {
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.left = '';
+          document.body.style.right = '';
+          window.scrollTo(0, scrollY);
+        }
+
+        function renderDeviceList(query) {
+          var list = document.getElementById('device-list');
+          var saved = loadSavedDevice();
+          var q = (query || '').toLowerCase().trim();
+          var filtered = DEVICES.map(function (d, i) { return { device: d, index: i }; });
+
+          if (q) {
+            filtered = filtered.filter(function (item) {
+              return item.device.brand.toLowerCase().indexOf(q) !== -1 ||
+                     item.device.model.toLowerCase().indexOf(q) !== -1;
+            });
+          }
+
+          if (filtered.length === 0) {
+            list.innerHTML = '<div class="no-results">' + t('no_results') + '</div>' +
+              '<div class="device-item not-listed" data-index="-1">' +
+              '<span class="device-name">' + t('not_listed_btn') + '</span>' +
+              '</div>';
+            list.querySelectorAll('.device-item').forEach(function (el) {
+              el.addEventListener('click', function () {
+                var idx = parseInt(el.getAttribute('data-index'), 10);
+                if (idx === -1) { showUnlistedResultScreen(); }
+              });
+            });
+            return;
+          }
+
+          var grouped = {};
+          filtered.forEach(function (item) {
+            if (!grouped[item.device.brand]) grouped[item.device.brand] = [];
+            grouped[item.device.brand].push(item);
+          });
+
+          var html = '';
+          var brands = Object.keys(grouped).sort();
+          brands.forEach(function (brand) {
+            html += '<div class="device-brand-header">' + brand + '</div>';
+            grouped[brand].forEach(function (item) {
+              var isSaved = saved && saved.index === item.index;
+              var badgeClass, badgeText;
+              if (item.device.pass === 'yes') {
+                badgeClass = 'compatible';
+                badgeText = t('badge_compatible');
+              } else if (item.device.pass === 'maybe') {
+                badgeClass = 'maybe';
+                badgeText = t('badge_maybe');
+              } else {
+                badgeClass = 'not-compatible';
+                badgeText = t('badge_not_compatible');
+              }
+              html += '<div class="device-item' + (isSaved ? ' saved' : '') + '" data-index="' + item.index + '">';
+              html += '<span class="device-name">' + item.device.brand + ' ' + item.device.model + '</span>';
+              html += '<span class="device-badge ' + badgeClass + '">' + badgeText + '</span>';
+              html += '</div>';
+            });
+          });
+
+          // "My device is not listed" item at the end
+          html += '<div class="device-item not-listed" data-index="-1">';
+          html += '<span class="device-name">' + t('not_listed_btn') + '</span>';
+          html += '</div>';
+
+          list.innerHTML = html;
+
+          list.querySelectorAll('.device-item').forEach(function (el) {
+            el.addEventListener('click', function () {
+              var idx = parseInt(el.getAttribute('data-index'), 10);
+              if (idx === -1) {
+                showUnlistedResultScreen();
+              } else {
+                selectDevice(idx);
+              }
+            });
+          });
+        }
+
+        function showResultScreen(idx) {
+          var d = DEVICES[idx];
+          var pass = d.pass;
+
+          // Hide list UI
+          document.getElementById('device-list').style.display = 'none';
+          document.querySelector('.modal-search').style.display = 'none';
+          document.querySelector('.help-section').style.display = 'none';
+
+          // Show back button
+          document.getElementById('modal-back').classList.add('visible');
+
+          // Determine state
+          var titleText, msgText, iconClass, iconSvg;
+          if (pass === 'yes') {
+            titleText = t('success_compatible_title');
+            msgText = t('success_compatible_msg');
+            iconClass = 'result-icon success';
+            iconSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+          } else if (pass === 'maybe') {
+            titleText = t('success_maybe_title');
+            msgText = t('success_maybe_msg');
+            iconClass = 'result-icon maybe';
+            iconSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>';
+          } else {
+            titleText = t('success_not_compatible_title');
+            msgText = t('success_not_compatible_msg');
+            iconClass = 'result-icon error';
+            iconSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>';
+          }
+
+          // Update title
+          document.getElementById('modal-title').textContent = titleText;
+
+          // Icon
+          var iconEl = document.getElementById('result-icon');
+          iconEl.className = iconClass;
+          iconEl.innerHTML = iconSvg;
+
+          // Text
+          document.getElementById('result-title').textContent = titleText;
+          document.getElementById('result-device-name').textContent = d.brand + ' ' + d.model;
+          document.getElementById('result-message').textContent = msgText;
+
+          // Download button — always visible
+          var dlBtn = document.getElementById('result-download-btn');
+          dlBtn.style.display = pass === 'no' ? 'none' : 'inline-flex';
+          dlBtn.href = APK_URL;
+          document.getElementById('result-download-text').textContent = t('success_download_btn');
+
+          // Show result container
+          document.getElementById('device-result').classList.add('visible');
+        }
+
+        function showUnlistedResultScreen() {
+          // Hide list UI
+          document.getElementById('device-list').style.display = 'none';
+          document.querySelector('.modal-search').style.display = 'none';
+          document.querySelector('.help-section').style.display = 'none';
+
+          // Show back button
+          document.getElementById('modal-back').classList.add('visible');
+
+          // Update title
+          document.getElementById('modal-title').textContent = t('success_unlisted_title');
+
+          // Icon — grey info
+          var iconEl = document.getElementById('result-icon');
+          iconEl.className = 'result-icon unlisted';
+          iconEl.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>';
+
+          // Text
+          document.getElementById('result-title').textContent = t('success_unlisted_title');
+          document.getElementById('result-device-name').textContent = '';
+          document.getElementById('result-message').textContent = t('success_unlisted_msg');
+
+          // Download button
+          var dlBtn = document.getElementById('result-download-btn');
+          dlBtn.style.display = 'inline-flex';
+          dlBtn.href = APK_URL;
+          document.getElementById('result-download-text').textContent = t('success_download_btn');
+
+          // Clear saved device since no real device was selected
+          clearSavedDevice();
+          updateSavedDeviceBar();
+
+          // Show result container
+          document.getElementById('device-result').classList.add('visible');
+        }
+
+        function hideResultScreen() {
+          document.getElementById('device-result').classList.remove('visible');
+          document.getElementById('device-list').style.display = '';
+          document.querySelector('.modal-search').style.display = '';
+          document.querySelector('.help-section').style.display = '';
+          document.getElementById('modal-back').classList.remove('visible');
+          document.getElementById('modal-title').textContent = pendingDownload ? t('modal_title_select') : t('modal_title_compat');
+        }
+
+        function openModal(forDownload) {
+          pendingDownload = forDownload;
+          hideResultScreen();
+          var titleEl = document.getElementById('modal-title');
+          titleEl.textContent = forDownload ? t('modal_title_select') : t('modal_title_compat');
+          document.getElementById('device-search').value = '';
+          renderDeviceList('');
+          document.getElementById('modal-overlay').classList.add('open');
+          lockScroll();
+        }
+
+        function closeModal() {
+          document.getElementById('modal-overlay').classList.remove('open');
+          hideResultScreen();
+          unlockScroll();
+          pendingDownload = false;
+        }
+
+        function selectDevice(idx) {
+          saveDevice(idx);
+          updateSavedDeviceBar();
+          showResultScreen(idx);
+        }
+
+        // Search debounce
+        var searchTimer;
+        document.getElementById('device-search').addEventListener('input', function () {
+          var val = this.value;
+          clearTimeout(searchTimer);
+          searchTimer = setTimeout(function () { renderDeviceList(val); }, 150);
+        });
+
+        // Close modal
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        document.getElementById('modal-overlay').addEventListener('click', function (e) {
+          if (e.target === this) closeModal();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeModal();
+        });
+
+        // Back button in result screen
+        document.getElementById('modal-back').addEventListener('click', function () {
+          hideResultScreen();
+          renderDeviceList(document.getElementById('device-search').value);
+        });
+
+        // Result download button — close modal after click if pendingDownload
+        document.getElementById('result-download-btn').addEventListener('click', function () {
+          if (pendingDownload) {
+            setTimeout(function () { closeModal(); }, 100);
+          }
+        });
+
+        // Compatible Devices button
+        document.getElementById('compat-link-btn').addEventListener('click', function () {
+          openModal(false);
+        });
+
+        // Change button
+        document.getElementById('change-device-btn').addEventListener('click', function () {
+          openModal(false);
+        });
+
+        // Android download button interception
+        var androidBtn = document.querySelector('.btn-android');
+        androidBtn.addEventListener('click', function (e) {
+          var saved = loadSavedDevice();
+          if (!saved) {
+            e.preventDefault();
+            openModal(true);
+          }
+          // If saved, let default <a> behavior proceed
+        });
+
+        // Init on load — no auto-detection
+        var saved = loadSavedDevice();
+        if (saved) {
+          updateSavedDeviceBar();
         }
       })();
 
