@@ -138,6 +138,7 @@
       /* Language picker */
       .lang-picker {
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-end;
         gap: 6px;
         padding: 16px 0 0;
@@ -593,7 +594,16 @@
     <div class="container">
       <div class="lang-picker">
         <button data-lang="en" class="lang-btn active">EN</button>
+        <button data-lang="bg" class="lang-btn">BG</button>
+        <button data-lang="de" class="lang-btn">DE</button>
+        <button data-lang="fil" class="lang-btn">FIL</button>
+        <button data-lang="fr" class="lang-btn">FR</button>
         <button data-lang="hi" class="lang-btn">HI</button>
+        <button data-lang="id" class="lang-btn">ID</button>
+        <button data-lang="it" class="lang-btn">IT</button>
+        <button data-lang="ka" class="lang-btn">KA</button>
+        <button data-lang="nl" class="lang-btn">NL</button>
+        <button data-lang="pl" class="lang-btn">PL</button>
         <button data-lang="tr" class="lang-btn">TR</button>
       </div>
       <header class="header">
@@ -908,6 +918,519 @@
             ios_compat_note:
               "iOS 18.6 veya üzeri tüm iPhone'lar desteklenmektedir",
           },
+          bg: {
+            title: "Shift — Изтегляне",
+            heading: "Получете ранен достъп до Shift",
+            btn_ios: "Изтегли за iOS",
+            btn_android: "Изтегли за Android",
+            guide_ios_title: "Ръководство за инсталация на iOS",
+            guide_ios_1:
+              'Докоснете бутона "Изтегли за iOS" на вашия iPhone',
+            guide_ios_2:
+              "Ако TestFlight не е инсталиран, ще бъдете пренасочени към App Store — първо го инсталирайте",
+            guide_ios_3:
+              "Върнете се на тази страница и докоснете бутона за изтегляне отново",
+            guide_ios_4:
+              'Докоснете "Accept", за да се присъедините към програмата за бета тестване',
+            guide_ios_5: 'Докоснете "Install", за да изтеглите Shift',
+            guide_android_title: "Ръководство за инсталация на Android",
+            guide_android_1:
+              'Докоснете бутона "Изтегли за Android", за да изтеглите APK файла',
+            guide_android_2:
+              "Отворете изтегления файл от известията или файловия мениджър",
+            guide_android_3:
+              'Ако бъдете попитани, разрешете инсталирането от неизвестни източници: Отидете в Settings > Security (или Apps & notifications) и активирайте "Install unknown apps" за вашия браузър',
+            guide_android_4:
+              'Докоснете "Install" и изчакайте инсталацията да завърши',
+            guide_android_5: "Отворете Shift от менюто с приложения",
+            btn_compatible_devices: "Съвместими Android устройства",
+            modal_title_compat: "Съвместими Android устройства",
+            modal_title_select: "Изберете вашия телефон",
+            search_placeholder: "Търсене на устройства...",
+            badge_compatible: "Вероятно съвместимо",
+            badge_not_compatible: "Не се поддържа",
+            badge_maybe: "Изисква допълнителна информация",
+            no_results: "Няма намерени устройства",
+            help_find_model: "Как да намеря модела на телефона си?",
+            help_step_1: "Отворете Settings на телефона си",
+            help_step_2: 'Докоснете "About phone" или "About device"',
+            help_step_3: 'Потърсете "Model name" или "Model number"',
+            help_step_4: "Сравнете със списъка по-горе",
+            change_device: "Промени",
+            success_compatible_title: "Вероятно съвместимо",
+            success_compatible_msg:
+              "Вашето устройство вероятно е съвместимо! Ще потвърдим това в приложението.",
+            success_not_compatible_title: "Не се поддържа",
+            success_not_compatible_msg: "Вашето устройство не се поддържа",
+            success_maybe_title: "Изисква допълнителна информация",
+            success_maybe_msg:
+              "Ще потвърдим съвместимостта на устройството в приложението.",
+            success_unlisted_title: "Устройството не е в списъка",
+            success_unlisted_msg:
+              "Ще потвърдим съвместимостта на устройството в приложението.",
+            not_listed_btn: "Моето устройство не е в списъка",
+            success_download_btn: "Изтегли APK",
+            success_back: "Назад",
+            ios_compat_note:
+              "Всички iPhone с iOS 18.6 или по-нова версия се поддържат",
+          },
+          de: {
+            title: "Shift — Download",
+            heading: "Erhalten Sie frühen Zugriff auf Shift",
+            btn_ios: "Für iOS herunterladen",
+            btn_android: "Für Android herunterladen",
+            guide_ios_title: "iOS-Installationsanleitung",
+            guide_ios_1:
+              'Tippen Sie auf Ihrem iPhone auf die Schaltfläche "Für iOS herunterladen"',
+            guide_ios_2:
+              "Falls TestFlight nicht installiert ist, werden Sie zum App Store weitergeleitet — installieren Sie es zuerst",
+            guide_ios_3:
+              "Kehren Sie zu dieser Seite zurück und tippen Sie erneut auf die Download-Schaltfläche",
+            guide_ios_4:
+              'Tippen Sie auf "Accept", um am Beta-Testprogramm teilzunehmen',
+            guide_ios_5:
+              'Tippen Sie auf "Install", um Shift herunterzuladen',
+            guide_android_title: "Android-Installationsanleitung",
+            guide_android_1:
+              'Tippen Sie auf "Für Android herunterladen", um die APK-Datei herunterzuladen',
+            guide_android_2:
+              "Öffnen Sie die heruntergeladene Datei über Ihre Benachrichtigungen oder den Dateimanager",
+            guide_android_3:
+              'Falls gefragt, erlauben Sie die Installation aus unbekannten Quellen: Gehen Sie zu Settings > Security (oder Apps & notifications) und aktivieren Sie "Install unknown apps" für Ihren Browser',
+            guide_android_4:
+              'Tippen Sie auf "Install" und warten Sie, bis die Installation abgeschlossen ist',
+            guide_android_5: "Öffnen Sie Shift über Ihren App-Drawer",
+            btn_compatible_devices: "Kompatible Android-Geräte",
+            modal_title_compat: "Kompatible Android-Geräte",
+            modal_title_select: "Wählen Sie Ihr Telefon",
+            search_placeholder: "Geräte suchen...",
+            badge_compatible: "Wahrscheinlich kompatibel",
+            badge_not_compatible: "Nicht unterstützt",
+            badge_maybe: "Zusätzliche Informationen erforderlich",
+            no_results: "Keine Geräte gefunden",
+            help_find_model: "Wie finde ich mein Telefonmodell?",
+            help_step_1: "Öffnen Sie die Einstellungen auf Ihrem Telefon",
+            help_step_2:
+              'Tippen Sie auf "Über das Telefon" oder "Geräteinformationen"',
+            help_step_3: 'Suchen Sie nach "Modellname" oder "Modellnummer"',
+            help_step_4: "Vergleichen Sie es mit der obigen Liste",
+            change_device: "Ändern",
+            success_compatible_title: "Wahrscheinlich kompatibel",
+            success_compatible_msg:
+              "Ihr Gerät ist wahrscheinlich kompatibel! Wir werden dies in der App bestätigen.",
+            success_not_compatible_title: "Nicht unterstützt",
+            success_not_compatible_msg: "Ihr Gerät wird nicht unterstützt",
+            success_maybe_title: "Zusätzliche Informationen erforderlich",
+            success_maybe_msg:
+              "Wir werden die Gerätekompatibilität in der App bestätigen.",
+            success_unlisted_title: "Gerät nicht aufgeführt",
+            success_unlisted_msg:
+              "Wir werden die Gerätekompatibilität in der App bestätigen.",
+            not_listed_btn: "Mein Gerät ist nicht aufgeführt",
+            success_download_btn: "APK herunterladen",
+            success_back: "Zurück",
+            ios_compat_note:
+              "Alle iPhones mit iOS 18.6 oder höher werden unterstützt",
+          },
+          fil: {
+            title: "Shift — I-download",
+            heading: "Magkaroon ng maagang access sa Shift",
+            btn_ios: "I-download para sa iOS",
+            btn_android: "I-download para sa Android",
+            guide_ios_title: "Gabay sa Pag-install sa iOS",
+            guide_ios_1:
+              'I-tap ang button na "I-download para sa iOS" sa iyong iPhone',
+            guide_ios_2:
+              "Kung hindi naka-install ang TestFlight, ire-redirect ka sa App Store — i-install muna ito",
+            guide_ios_3:
+              "Bumalik sa pahinang ito at i-tap muli ang download button",
+            guide_ios_4:
+              'I-tap ang "Accept" upang sumali sa beta testing program',
+            guide_ios_5: 'I-tap ang "Install" upang i-download ang Shift',
+            guide_android_title: "Gabay sa Pag-install sa Android",
+            guide_android_1:
+              'I-tap ang "I-download para sa Android" upang i-download ang APK file',
+            guide_android_2:
+              "Buksan ang na-download na file mula sa iyong notifications o file manager",
+            guide_android_3:
+              'Kung tatanungin, payagan ang pag-install mula sa hindi kilalang mga pinagmulan: Pumunta sa Settings > Security (o Apps & notifications) at paganahin ang "Install unknown apps" para sa iyong browser',
+            guide_android_4:
+              'I-tap ang "Install" at hintayin makumpleto ang pag-install',
+            guide_android_5: "Buksan ang Shift mula sa iyong app drawer",
+            btn_compatible_devices: "Mga Compatible na Android Device",
+            modal_title_compat: "Mga Compatible na Android Device",
+            modal_title_select: "Piliin ang Iyong Telepono",
+            search_placeholder: "Maghanap ng mga device...",
+            badge_compatible: "Malamang Compatible",
+            badge_not_compatible: "Hindi Suportado",
+            badge_maybe: "Kailangan ng karagdagang impormasyon",
+            no_results: "Walang nahanap na device",
+            help_find_model:
+              "Paano ko mahahanap ang modelo ng aking telepono?",
+            help_step_1: "Buksan ang Settings sa iyong telepono",
+            help_step_2: 'I-tap ang "About phone" o "About device"',
+            help_step_3: 'Hanapin ang "Model name" o "Model number"',
+            help_step_4: "Itugma ito sa listahan sa itaas",
+            change_device: "Palitan",
+            success_compatible_title: "Malamang Compatible",
+            success_compatible_msg:
+              "Malamang compatible ang iyong device! Kumpirmahin namin ito sa loob ng app.",
+            success_not_compatible_title: "Hindi Suportado",
+            success_not_compatible_msg: "Hindi suportado ang iyong device",
+            success_maybe_title: "Kailangan ng karagdagang impormasyon",
+            success_maybe_msg:
+              "Kumpirmahin namin ang compatibility ng device sa loob ng application.",
+            success_unlisted_title: "Hindi Nakalista ang Device",
+            success_unlisted_msg:
+              "Berepikahin namin ang compatibility ng device sa loob ng app.",
+            not_listed_btn: "Hindi nakalista ang aking device",
+            success_download_btn: "I-download ang APK",
+            success_back: "Bumalik",
+            ios_compat_note:
+              "Sinusuportahan ang lahat ng iPhone na may iOS 18.6 o mas mataas",
+          },
+          fr: {
+            title: "Shift — Télécharger",
+            heading: "Obtenez un accès anticipé à Shift",
+            btn_ios: "Télécharger pour iOS",
+            btn_android: "Télécharger pour Android",
+            guide_ios_title: "Guide d'installation iOS",
+            guide_ios_1:
+              'Appuyez sur le bouton "Télécharger pour iOS" sur votre iPhone',
+            guide_ios_2:
+              "Si TestFlight n'est pas installé, vous serez redirigé vers l'App Store — installez-le d'abord",
+            guide_ios_3:
+              "Revenez sur cette page et appuyez à nouveau sur le bouton de téléchargement",
+            guide_ios_4:
+              'Appuyez sur "Accept" pour rejoindre le programme de test bêta',
+            guide_ios_5: 'Appuyez sur "Install" pour télécharger Shift',
+            guide_android_title: "Guide d'installation Android",
+            guide_android_1:
+              'Appuyez sur "Télécharger pour Android" pour télécharger le fichier APK',
+            guide_android_2:
+              "Ouvrez le fichier téléchargé depuis vos notifications ou votre gestionnaire de fichiers",
+            guide_android_3:
+              'Si demandé, autorisez l\'installation depuis des sources inconnues : Allez dans Settings > Security (ou Apps & notifications) et activez "Install unknown apps" pour votre navigateur',
+            guide_android_4:
+              'Appuyez sur "Install" et attendez la fin de l\'installation',
+            guide_android_5:
+              "Ouvrez Shift depuis votre tiroir d'applications",
+            btn_compatible_devices: "Appareils Android compatibles",
+            modal_title_compat: "Appareils Android compatibles",
+            modal_title_select: "Sélectionnez votre téléphone",
+            search_placeholder: "Rechercher des appareils...",
+            badge_compatible: "Probablement compatible",
+            badge_not_compatible: "Non pris en charge",
+            badge_maybe: "Informations supplémentaires requises",
+            no_results: "Aucun appareil trouvé",
+            help_find_model: "Comment trouver le modèle de mon téléphone ?",
+            help_step_1: "Ouvrez les Paramètres de votre téléphone",
+            help_step_2:
+              'Appuyez sur "À propos du téléphone" ou "À propos de l\'appareil"',
+            help_step_3:
+              'Recherchez "Nom du modèle" ou "Numéro de modèle"',
+            help_step_4: "Comparez-le avec la liste ci-dessus",
+            change_device: "Modifier",
+            success_compatible_title: "Probablement compatible",
+            success_compatible_msg:
+              "Votre appareil est probablement compatible ! Nous le confirmerons dans l'application.",
+            success_not_compatible_title: "Non pris en charge",
+            success_not_compatible_msg:
+              "Votre appareil n'est pas pris en charge",
+            success_maybe_title: "Informations supplémentaires requises",
+            success_maybe_msg:
+              "Nous confirmerons la compatibilité de l'appareil dans l'application.",
+            success_unlisted_title: "Appareil non répertorié",
+            success_unlisted_msg:
+              "Nous vérifierons la compatibilité de l'appareil dans l'application.",
+            not_listed_btn: "Mon appareil n'est pas répertorié",
+            success_download_btn: "Télécharger l'APK",
+            success_back: "Retour",
+            ios_compat_note:
+              "Tous les iPhones avec iOS 18.6 ou une version ultérieure sont pris en charge",
+          },
+          id: {
+            title: "Shift — Unduh",
+            heading: "Dapatkan akses awal ke Shift",
+            btn_ios: "Unduh untuk iOS",
+            btn_android: "Unduh untuk Android",
+            guide_ios_title: "Panduan Instalasi iOS",
+            guide_ios_1: 'Ketuk tombol "Unduh untuk iOS" di iPhone Anda',
+            guide_ios_2:
+              "Jika TestFlight belum terinstal, Anda akan diarahkan ke App Store — instal terlebih dahulu",
+            guide_ios_3:
+              "Kembali ke halaman ini dan ketuk tombol unduh lagi",
+            guide_ios_4:
+              'Ketuk "Accept" untuk bergabung dengan program beta testing',
+            guide_ios_5: 'Ketuk "Install" untuk mengunduh Shift',
+            guide_android_title: "Panduan Instalasi Android",
+            guide_android_1:
+              'Ketuk "Unduh untuk Android" untuk mengunduh file APK',
+            guide_android_2:
+              "Buka file yang diunduh dari notifikasi atau pengelola file Anda",
+            guide_android_3:
+              'Jika diminta, izinkan instalasi dari sumber tidak dikenal: Buka Settings > Security (atau Apps & notifications) dan aktifkan "Install unknown apps" untuk browser Anda',
+            guide_android_4:
+              'Ketuk "Install" dan tunggu hingga instalasi selesai',
+            guide_android_5: "Buka Shift dari laci aplikasi Anda",
+            btn_compatible_devices: "Perangkat Android yang Kompatibel",
+            modal_title_compat: "Perangkat Android yang Kompatibel",
+            modal_title_select: "Pilih Ponsel Anda",
+            search_placeholder: "Cari perangkat...",
+            badge_compatible: "Kemungkinan Kompatibel",
+            badge_not_compatible: "Tidak Didukung",
+            badge_maybe: "Memerlukan informasi tambahan",
+            no_results: "Tidak ada perangkat ditemukan",
+            help_find_model: "Bagaimana cara menemukan model ponsel saya?",
+            help_step_1: "Buka Pengaturan di ponsel Anda",
+            help_step_2: 'Ketuk "Tentang ponsel" atau "Tentang perangkat"',
+            help_step_3: 'Cari "Nama model" atau "Nomor model"',
+            help_step_4: "Cocokkan dengan daftar di atas",
+            change_device: "Ubah",
+            success_compatible_title: "Kemungkinan Kompatibel",
+            success_compatible_msg:
+              "Perangkat Anda kemungkinan kompatibel! Kami akan mengonfirmasinya di dalam aplikasi.",
+            success_not_compatible_title: "Tidak Didukung",
+            success_not_compatible_msg: "Perangkat Anda tidak didukung",
+            success_maybe_title: "Memerlukan informasi tambahan",
+            success_maybe_msg:
+              "Kami akan mengonfirmasi kompatibilitas perangkat di dalam aplikasi.",
+            success_unlisted_title: "Perangkat Tidak Terdaftar",
+            success_unlisted_msg:
+              "Kami akan memverifikasi kompatibilitas perangkat di dalam aplikasi.",
+            not_listed_btn: "Perangkat saya tidak terdaftar",
+            success_download_btn: "Unduh APK",
+            success_back: "Kembali",
+            ios_compat_note:
+              "Semua iPhone dengan iOS 18.6 atau lebih tinggi didukung",
+          },
+          it: {
+            title: "Shift — Scarica",
+            heading: "Ottieni l'accesso anticipato a Shift",
+            btn_ios: "Scarica per iOS",
+            btn_android: "Scarica per Android",
+            guide_ios_title: "Guida all'installazione iOS",
+            guide_ios_1:
+              'Tocca il pulsante "Scarica per iOS" sul tuo iPhone',
+            guide_ios_2:
+              "Se TestFlight non è installato, verrai reindirizzato all'App Store — installalo prima",
+            guide_ios_3:
+              "Torna a questa pagina e tocca di nuovo il pulsante di download",
+            guide_ios_4:
+              'Tocca "Accept" per partecipare al programma di beta testing',
+            guide_ios_5: 'Tocca "Install" per scaricare Shift',
+            guide_android_title: "Guida all'installazione Android",
+            guide_android_1:
+              'Tocca "Scarica per Android" per scaricare il file APK',
+            guide_android_2:
+              "Apri il file scaricato dalle notifiche o dal gestore file",
+            guide_android_3:
+              'Se richiesto, consenti l\'installazione da fonti sconosciute: vai su Settings > Security (o Apps & notifications) e abilita "Install unknown apps" per il tuo browser',
+            guide_android_4:
+              'Tocca "Install" e attendi il completamento dell\'installazione',
+            guide_android_5: "Apri Shift dal drawer delle app",
+            btn_compatible_devices: "Dispositivi Android compatibili",
+            modal_title_compat: "Dispositivi Android compatibili",
+            modal_title_select: "Seleziona il tuo telefono",
+            search_placeholder: "Cerca dispositivi...",
+            badge_compatible: "Probabilmente compatibile",
+            badge_not_compatible: "Non supportato",
+            badge_maybe: "Richiede informazioni aggiuntive",
+            no_results: "Nessun dispositivo trovato",
+            help_find_model: "Come trovo il modello del mio telefono?",
+            help_step_1: "Apri le Impostazioni sul tuo telefono",
+            help_step_2:
+              'Tocca "Informazioni sul telefono" o "Informazioni sul dispositivo"',
+            help_step_3: 'Cerca "Nome modello" o "Numero modello"',
+            help_step_4: "Confrontalo con l'elenco sopra",
+            change_device: "Modifica",
+            success_compatible_title: "Probabilmente compatibile",
+            success_compatible_msg:
+              "Il tuo dispositivo è probabilmente compatibile! Lo confermeremo nell'app.",
+            success_not_compatible_title: "Non supportato",
+            success_not_compatible_msg: "Il tuo dispositivo non è supportato",
+            success_maybe_title: "Richiede informazioni aggiuntive",
+            success_maybe_msg:
+              "Confermeremo la compatibilità del dispositivo nell'applicazione.",
+            success_unlisted_title: "Dispositivo non elencato",
+            success_unlisted_msg:
+              "Verificheremo la compatibilità del dispositivo nell'app.",
+            not_listed_btn: "Il mio dispositivo non è elencato",
+            success_download_btn: "Scarica APK",
+            success_back: "Indietro",
+            ios_compat_note:
+              "Tutti gli iPhone con iOS 18.6 o successivo sono supportati",
+          },
+          ka: {
+            title: "Shift — ჩამოტვირთვა",
+            heading: "მიიღეთ ადრეული წვდომა Shift-ზე",
+            btn_ios: "ჩამოტვირთე iOS-ისთვის",
+            btn_android: "ჩამოტვირთე Android-ისთვის",
+            guide_ios_title: "iOS-ის ინსტალაციის სახელმძღვანელო",
+            guide_ios_1:
+              'შეეხეთ ღილაკს "ჩამოტვირთე iOS-ისთვის" თქვენს iPhone-ზე',
+            guide_ios_2:
+              "თუ TestFlight დაინსტალირებული არ არის, გადამისამართდებით App Store-ში — ჯერ დააინსტალირეთ იგი",
+            guide_ios_3:
+              "დაბრუნდით ამ გვერდზე და ხელახლა შეეხეთ ჩამოტვირთვის ღილაკს",
+            guide_ios_4:
+              'შეეხეთ "Accept"-ს ბეტა ტესტირების პროგრამაში ჩასართავად',
+            guide_ios_5: 'შეეხეთ "Install"-ს Shift-ის ჩამოსატვირთად',
+            guide_android_title: "Android-ის ინსტალაციის სახელმძღვანელო",
+            guide_android_1:
+              'შეეხეთ "ჩამოტვირთე Android-ისთვის" ღილაკს APK ფაილის ჩამოსატვირთად',
+            guide_android_2:
+              "გახსენით ჩამოტვირთული ფაილი თქვენი შეტყობინებებიდან ან ფაილების მენეჯერიდან",
+            guide_android_3:
+              'თუ მოგეთხოვებათ, დართეთ ნება ინსტალაციისთვის უცნობი წყაროებიდან: გადადით Settings > Security-ში (ან Apps & notifications) და ჩართეთ "Install unknown apps" თქვენი ბრაუზერისთვის',
+            guide_android_4:
+              'შეეხეთ "Install"-ს და დაელოდეთ ინსტალაციის დასრულებას',
+            guide_android_5: "გახსენით Shift აპლიკაციების მენიუდან",
+            btn_compatible_devices: "თავსებადი Android მოწყობილობები",
+            modal_title_compat: "თავსებადი Android მოწყობილობები",
+            modal_title_select: "აირჩიეთ თქვენი ტელეფონი",
+            search_placeholder: "მოწყობილობების ძიება...",
+            badge_compatible: "სავარაუდოდ თავსებადი",
+            badge_not_compatible: "მხარდაჭერილი არ არის",
+            badge_maybe: "საჭიროა დამატებითი ინფორმაცია",
+            no_results: "მოწყობილობა ვერ მოიძებნა",
+            help_find_model: "როგორ ვიპოვო ჩემი ტელეფონის მოდელი?",
+            help_step_1: "გახსენით პარამეტრები თქვენს ტელეფონში",
+            help_step_2:
+              'შეეხეთ "ტელეფონის შესახებ" ან "მოწყობილობის შესახებ"',
+            help_step_3: 'მოძებნეთ "მოდელის სახელი" ან "მოდელის ნომერი"',
+            help_step_4: "შეადარეთ იგი ზემოთ მოცემულ სიას",
+            change_device: "შეცვლა",
+            success_compatible_title: "სავარაუდოდ თავსებადი",
+            success_compatible_msg:
+              "თქვენი მოწყობილობა სავარაუდოდ თავსებადია! ამას აპში დავადასტურებთ.",
+            success_not_compatible_title: "მხარდაჭერილი არ არის",
+            success_not_compatible_msg:
+              "თქვენი მოწყობილობა მხარდაჭერილი არ არის",
+            success_maybe_title: "საჭიროა დამატებითი ინფორმაცია",
+            success_maybe_msg:
+              "მოწყობილობის თავსებადობას აპლიკაციაში დავადასტურებთ.",
+            success_unlisted_title: "მოწყობილობა სიაში არ არის",
+            success_unlisted_msg:
+              "მოწყობილობის თავსებადობას აპლიკაციაში დავადასტურებთ.",
+            not_listed_btn: "ჩემი მოწყობილობა სიაში არ არის",
+            success_download_btn: "ჩამოტვირთე APK",
+            success_back: "უკან",
+            ios_compat_note:
+              "მხარდაჭერილია ყველა iPhone iOS 18.6 ან უფრო ახალი ვერსიით",
+          },
+          nl: {
+            title: "Shift — Downloaden",
+            heading: "Krijg vroege toegang tot Shift",
+            btn_ios: "Downloaden voor iOS",
+            btn_android: "Downloaden voor Android",
+            guide_ios_title: "iOS-installatiegids",
+            guide_ios_1: 'Tik op de knop "Downloaden voor iOS" op je iPhone',
+            guide_ios_2:
+              "Als TestFlight niet is geïnstalleerd, word je doorgestuurd naar de App Store — installeer het eerst",
+            guide_ios_3:
+              "Keer terug naar deze pagina en tik opnieuw op de downloadknop",
+            guide_ios_4:
+              'Tik op "Accept" om deel te nemen aan het bètatestprogramma',
+            guide_ios_5: 'Tik op "Install" om Shift te downloaden',
+            guide_android_title: "Android-installatiegids",
+            guide_android_1:
+              'Tik op "Downloaden voor Android" om het APK-bestand te downloaden',
+            guide_android_2:
+              "Open het gedownloade bestand vanuit je meldingen of bestandsbeheer",
+            guide_android_3:
+              'Indien gevraagd, sta installatie vanuit onbekende bronnen toe: ga naar Settings > Security (of Apps & notifications) en schakel "Install unknown apps" in voor je browser',
+            guide_android_4:
+              'Tik op "Install" en wacht tot de installatie is voltooid',
+            guide_android_5: "Open Shift vanuit je app-lade",
+            btn_compatible_devices: "Compatibele Android-apparaten",
+            modal_title_compat: "Compatibele Android-apparaten",
+            modal_title_select: "Selecteer je telefoon",
+            search_placeholder: "Apparaten zoeken...",
+            badge_compatible: "Waarschijnlijk compatibel",
+            badge_not_compatible: "Niet ondersteund",
+            badge_maybe: "Aanvullende informatie vereist",
+            no_results: "Geen apparaten gevonden",
+            help_find_model: "Hoe vind ik mijn telefoonmodel?",
+            help_step_1: "Open Instellingen op je telefoon",
+            help_step_2: 'Tik op "Over de telefoon" of "Over het apparaat"',
+            help_step_3: 'Zoek naar "Modelnaam" of "Modelnummer"',
+            help_step_4: "Vergelijk het met de bovenstaande lijst",
+            change_device: "Wijzigen",
+            success_compatible_title: "Waarschijnlijk compatibel",
+            success_compatible_msg:
+              "Je apparaat is waarschijnlijk compatibel! We bevestigen dit in de app.",
+            success_not_compatible_title: "Niet ondersteund",
+            success_not_compatible_msg: "Je apparaat wordt niet ondersteund",
+            success_maybe_title: "Aanvullende informatie vereist",
+            success_maybe_msg:
+              "We bevestigen de compatibiliteit van het apparaat in de app.",
+            success_unlisted_title: "Apparaat niet in lijst",
+            success_unlisted_msg:
+              "We verifiëren de compatibiliteit van het apparaat in de app.",
+            not_listed_btn: "Mijn apparaat staat niet in de lijst",
+            success_download_btn: "APK downloaden",
+            success_back: "Terug",
+            ios_compat_note:
+              "Alle iPhones met iOS 18.6 of hoger worden ondersteund",
+          },
+          pl: {
+            title: "Shift — Pobierz",
+            heading: "Uzyskaj wczesny dostęp do Shift",
+            btn_ios: "Pobierz na iOS",
+            btn_android: "Pobierz na Androida",
+            guide_ios_title: "Przewodnik instalacji iOS",
+            guide_ios_1:
+              'Dotknij przycisku "Pobierz na iOS" na swoim iPhonie',
+            guide_ios_2:
+              "Jeśli TestFlight nie jest zainstalowany, zostaniesz przekierowany do App Store — najpierw go zainstaluj",
+            guide_ios_3:
+              "Wróć na tę stronę i ponownie dotknij przycisku pobierania",
+            guide_ios_4:
+              'Dotknij "Accept", aby dołączyć do programu testów beta',
+            guide_ios_5: 'Dotknij "Install", aby pobrać Shift',
+            guide_android_title: "Przewodnik instalacji Android",
+            guide_android_1:
+              'Dotknij "Pobierz na Androida", aby pobrać plik APK',
+            guide_android_2:
+              "Otwórz pobrany plik z powiadomień lub menedżera plików",
+            guide_android_3:
+              'Jeśli pojawi się pytanie, zezwól na instalację z nieznanych źródeł: przejdź do Settings > Security (lub Apps & notifications) i włącz "Install unknown apps" dla swojej przeglądarki',
+            guide_android_4:
+              'Dotknij "Install" i poczekaj na zakończenie instalacji',
+            guide_android_5: "Otwórz Shift z szuflady aplikacji",
+            btn_compatible_devices: "Kompatybilne urządzenia Android",
+            modal_title_compat: "Kompatybilne urządzenia Android",
+            modal_title_select: "Wybierz swój telefon",
+            search_placeholder: "Szukaj urządzeń...",
+            badge_compatible: "Prawdopodobnie kompatybilny",
+            badge_not_compatible: "Nieobsługiwane",
+            badge_maybe: "Wymaga dodatkowych informacji",
+            no_results: "Nie znaleziono urządzeń",
+            help_find_model: "Jak znaleźć model mojego telefonu?",
+            help_step_1: "Otwórz Ustawienia w telefonie",
+            help_step_2:
+              'Dotknij "Informacje o telefonie" lub "Informacje o urządzeniu"',
+            help_step_3: 'Poszukaj "Nazwa modelu" lub "Numer modelu"',
+            help_step_4: "Porównaj go z powyższą listą",
+            change_device: "Zmień",
+            success_compatible_title: "Prawdopodobnie kompatybilny",
+            success_compatible_msg:
+              "Twoje urządzenie jest prawdopodobnie kompatybilne! Potwierdzimy to w aplikacji.",
+            success_not_compatible_title: "Nieobsługiwane",
+            success_not_compatible_msg: "Twoje urządzenie nie jest obsługiwane",
+            success_maybe_title: "Wymaga dodatkowych informacji",
+            success_maybe_msg:
+              "Potwierdzimy kompatybilność urządzenia w aplikacji.",
+            success_unlisted_title: "Urządzenie nie jest na liście",
+            success_unlisted_msg:
+              "Zweryfikujemy kompatybilność urządzenia w aplikacji.",
+            not_listed_btn: "Mojego urządzenia nie ma na liście",
+            success_download_btn: "Pobierz APK",
+            success_back: "Wstecz",
+            ios_compat_note:
+              "Wszystkie iPhone'y z iOS 18.6 lub nowszym są obsługiwane",
+          },
         };
 
         window.__shiftTranslations = translations;
@@ -959,6 +1482,17 @@
           var navLang = (navigator.language || "").toLowerCase();
           if (navLang.startsWith("tr")) applyLanguage("tr");
           else if (navLang.startsWith("hi")) applyLanguage("hi");
+          else if (navLang.startsWith("bg")) applyLanguage("bg");
+          else if (navLang.startsWith("de")) applyLanguage("de");
+          else if (navLang.startsWith("fil") || navLang.startsWith("tl"))
+            applyLanguage("fil");
+          else if (navLang.startsWith("fr")) applyLanguage("fr");
+          else if (navLang.startsWith("id") || navLang.startsWith("in"))
+            applyLanguage("id");
+          else if (navLang.startsWith("it")) applyLanguage("it");
+          else if (navLang.startsWith("ka")) applyLanguage("ka");
+          else if (navLang.startsWith("nl")) applyLanguage("nl");
+          else if (navLang.startsWith("pl")) applyLanguage("pl");
           else applyLanguage("en");
         }
       })();
