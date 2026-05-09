@@ -168,20 +168,6 @@
         border-color: #ddd;
       }
 
-      .version-badge {
-        text-align: center;
-        margin-bottom: 48px;
-        font-size: 13px;
-        color: #888;
-      }
-      .version-badge a {
-        color: #888;
-        text-decoration: none;
-      }
-      .version-badge a:hover {
-        text-decoration: underline;
-      }
-
       .ios-compat-note {
         display: flex;
         align-items: center;
@@ -624,7 +610,7 @@
           <span data-i18n="btn_ios">Download for iOS</span>
         </a>
         <a
-          href="https://github.com/MicroAGI-Labs/app-v2-distribution/releases/latest/download/shift.apk"
+          href="https://play.google.com/store/apps/details?id=com.microagi.android"
           class="btn btn-android"
         >
           <svg viewBox="0 0 24 24" fill="currentColor">
@@ -650,8 +636,6 @@
         <button class="change-btn" id="change-device-btn" data-i18n="change_device">Change</button>
       </div>
       -->
-      <div class="version-badge" id="version-badge"></div>
-
       <div class="guides">
         <div class="guide">
           <h2 data-i18n="guide_ios_title">iOS Installation Guide</h2>
@@ -2168,37 +2152,6 @@
         //   updateSavedDeviceBar();
         // }
       })();
-
-      fetch(
-        "https://api.github.com/repos/MicroAGI-Labs/app-v2-distribution/releases/latest",
-      )
-        .then(function (r) {
-          return r.json();
-        })
-        .then(function (data) {
-          if (data.tag_name) {
-            var badge = document.getElementById("version-badge");
-            var a = document.createElement("a");
-            a.href = data.html_url;
-            a.target = "_blank";
-            a.textContent = "Android " + data.tag_name;
-            badge.appendChild(a);
-            if (data.published_at) {
-              var date = new Date(data.published_at);
-              var formatted = date.toLocaleDateString("en-GB", {
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-              });
-              var span = document.createElement("span");
-              span.textContent = " · " + formatted;
-              badge.appendChild(span);
-            }
-          }
-        })
-        .catch(function () {});
     </script>
   </body>
 </html>
