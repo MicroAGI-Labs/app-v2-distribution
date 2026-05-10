@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shift Support</title>
+  <meta name="description" content="Shift Support — get help with the Shift app: account, video submissions, quality review, payouts, privacy, and more." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://go-shift.app/support" />
+  <link rel="icon" type="image/png" href="../assets/primary_icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../site-assets/styles.css" />
+  <style>
+    /* ── SUPPORT PAGE EXTENSIONS ────────────────────────────── */
+    .support__intro {
+      max-width: 560px;
+      font-size: clamp(17px, 1.4vw, 20px);
+      color: var(--dim);
+      margin-bottom: clamp(40px, 5vw, 56px);
+    }
+
+    .support__card {
+      background: var(--black);
+      border: 1px solid var(--faint);
+      padding: clamp(28px, 3vw, 40px);
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .support__row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--faint);
+    }
+    .support__row:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .support__label {
+      flex: 0 0 96px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dimmer);
+    }
+
+    .support__value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--white);
+      word-break: break-word;
+    }
+
+    .support__value a {
+      color: var(--orange);
+      transition: opacity 0.2s;
+    }
+    .support__value a:hover { opacity: 0.7; }
+
+    .support__topics {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--faint);
+      border: 1px solid var(--faint);
+    }
+
+    .support__topics li {
+      background: var(--black);
+      padding: clamp(20px, 2vw, 28px) clamp(20px, 2.5vw, 32px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: -0.005em;
+    }
+
+    .support__topics li::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--orange);
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
+
+    .support__note {
+      font-size: 13px;
+      color: var(--dimmer);
+      max-width: 560px;
+      margin-top: 24px;
+    }
+
+    .support__privacy {
+      max-width: 560px;
+      font-size: clamp(15px, 1.2vw, 17px);
+      color: var(--dim);
+      line-height: 1.65;
+    }
+
+    .support__privacy a {
+      color: var(--orange);
+      transition: opacity 0.2s;
+    }
+    .support__privacy a:hover { opacity: 0.7; }
+
+    @media (max-width: 768px) {
+      .support__topics { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas class="site-canvas" id="bgCanvas" aria-hidden="true"></canvas>
+  <canvas class="dots-canvas" id="dotsCanvas" aria-hidden="true"></canvas>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="/" class="nav__logo" aria-label="SHIFT Home">
+      <img src="../site-assets/img/logo.svg" alt="SHIFT" class="nav__logo-img" width="100" height="28" />
+    </a>
+    <div class="nav__right">
+      <a href="/marketing" class="footer__link">For business</a>
+      <a href="https://www.microagi.ai" class="nav__microagi" target="_blank" rel="noopener noreferrer" aria-label="Visit MicroAGI">
+        <span class="nav__microagi-micro">micro</span><span class="nav__microagi-agi">agi</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Support</p>
+        <h1 class="hero__headline">
+          Need a hand?<br />
+          <em>We're here.</em>
+        </h1>
+        <p class="hero__sub">
+          Reach out for help with the Shift app — account access, video submissions, quality review, payouts, privacy requests, feedback, or feature ideas.
+        </p>
+        <div class="hero__ctas">
+          <a href="mailto:support@go-shift.app" class="btn btn--primary">Contact support</a>
+          <a href="#topics" class="btn btn--ghost">What we can help with</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section__header">
+        <span class="section__num">01</span>
+        <span class="section__label">contact</span>
+      </div>
+
+      <h2 class="how__headline">
+        How to<br /><em>reach us.</em>
+      </h2>
+      <p class="support__intro">
+        For app issues, account questions, video submissions, quality review, payout-related questions, feedback, or feature requests, contact us directly.
+      </p>
+
+      <div class="support__card" aria-label="Contact details">
+        <div class="support__row">
+          <span class="support__label">Support</span>
+          <span class="support__value"><a href="mailto:support@go-shift.app">support@go-shift.app</a></span>
+        </div>
+        <div class="support__row">
+          <span class="support__label">Privacy</span>
+          <span class="support__value"><a href="mailto:privacy@go-shift.app">privacy@go-shift.app</a></span>
+        </div>
+        <div class="support__row">
+          <span class="support__label">Company</span>
+          <span class="support__value">MicroAGI GmbH</span>
+        </div>
+        <div class="support__row">
+          <span class="support__label">Address</span>
+          <span class="support__value">[legal address]</span>
+        </div>
+      </div>
+
+      <p class="support__note">We aim to respond to support requests as quickly as possible.</p>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="section" id="topics">
+      <div class="section__header">
+        <span class="section__num">02</span>
+        <span class="section__label">common topics</span>
+      </div>
+
+      <h2 class="how__headline">
+        What we can<br /><em>help with.</em>
+      </h2>
+      <p class="how__intro">
+        The most common reasons people reach out. If your question isn't here, email us anyway — we read every message.
+      </p>
+
+      <ul class="support__topics" aria-label="Common support topics">
+        <li><span>App issues</span></li>
+        <li><span>Video upload problems</span></li>
+        <li><span>Submission review status</span></li>
+        <li><span>Quality requirements</span></li>
+        <li><span>Account access</span></li>
+        <li><span>Payment or payout questions</span></li>
+        <li><span>Feedback &amp; feature requests</span></li>
+        <li><span>Privacy &amp; data requests</span></li>
+      </ul>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="section" id="privacy">
+      <div class="section__header">
+        <span class="section__num">03</span>
+        <span class="section__label">privacy &amp; data</span>
+      </div>
+
+      <h2 class="contact__headline">
+        Your data,<br /><em>your rights.</em>
+      </h2>
+      <p class="support__privacy">
+        For privacy or data-related requests — including access, correction, or deletion of personal data — please contact <a href="mailto:privacy@go-shift.app">privacy@go-shift.app</a>. We respond to all verified requests in line with applicable data-protection law.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo" aria-label="SHIFT Home">
+          <img src="../site-assets/img/logo.svg" alt="SHIFT" class="footer__logo-img" width="80" height="22" />
+        </a>
+        <p class="footer__tagline">Turning real work into real value.</p>
+        <p class="footer__tagline">A MicroAGI company.</p>
+      </div>
+      <div class="footer__right">
+        <a href="/" class="footer__link">Download app</a>
+        <a href="/marketing" class="footer__link">For business</a>
+        <a href="mailto:support@go-shift.app" class="footer__link">support@go-shift.app</a>
+        <a href="mailto:privacy@go-shift.app" class="footer__link">privacy@go-shift.app</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 SHIFT. A MicroAGI GmbH brand. Registered in England and Wales.</p>
+    </div>
+  </footer>
+
+  <script src="../site-assets/bg.js"></script>
+  <script src="../site-assets/dots.js"></script>
+  <script src="../site-assets/main.js"></script>
+</body>
+</html>
