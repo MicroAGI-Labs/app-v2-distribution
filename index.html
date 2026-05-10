@@ -3,250 +3,273 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shift — Download</title>
+    <title>Shift — Get the app</title>
+    <meta name="description" content="Download Shift on iOS or Android. Record clips during your normal day at work, submit through the app, and earn for what you'd be doing anyway." />
+    <link rel="canonical" href="https://go-shift.app/" />
     <link rel="icon" type="image/png" href="assets/primary_icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@1,300;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="site-assets/styles.css" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      /* ── ROOT PAGE OVERRIDES ──────────────────────────────── */
 
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        color: #1a1a1a;
-        background: #fff;
-        line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      .container {
-        max-width: 720px;
+      /* Hero */
+      .download-hero {
+        max-width: var(--max-w);
         margin: 0 auto;
-        padding: 0 24px;
-      }
-
-      /* Header */
-      .header {
+        padding: calc(var(--nav-h) + 56px) var(--pad-h) clamp(48px, 6vw, 80px);
         text-align: center;
-        padding: 64px 0 48px;
+        position: relative;
       }
 
-      .app-icon {
+      .download-hero .app-icon {
         width: 96px;
         height: 96px;
         border-radius: 22px;
+        margin: 0 auto 28px;
+        display: block;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+      }
+
+      .download-hero__eyebrow {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 18px;
+      }
+
+      .download-hero h1 {
+        font-size: clamp(40px, 5.5vw, 80px);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+        color: var(--white);
         margin-bottom: 24px;
       }
 
-      .header h1 {
-        font-size: 20px;
-        font-weight: 500;
-        color: #555;
-        letter-spacing: -0.01em;
+      .download-hero h1 em {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-weight: 300;
       }
 
-      /* Download buttons */
+      .download-hero__lede {
+        font-size: clamp(17px, 1.5vw, 21px);
+        color: var(--dim);
+        line-height: 1.6;
+        max-width: 560px;
+        margin: 0 auto 40px;
+      }
+
+      /* Downloads */
       .downloads {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
         justify-content: center;
-        padding-bottom: 64px;
+        margin: 0 auto 24px;
+        max-width: 720px;
       }
 
-      .btn {
+      .dl-btn {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        padding: 14px 28px;
-        border-radius: 12px;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 600;
-        transition: opacity 0.15s ease;
+        font-family: var(--font-sans);
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 16px 26px;
+        border-radius: 2px;
+        transition: background 0.2s var(--ease), color 0.2s, border-color 0.2s;
+        white-space: nowrap;
       }
 
-      .btn:hover {
-        opacity: 0.85;
-      }
-
-      .btn-ios {
-        background: #1a1a1a;
+      .dl-btn--primary {
+        background: var(--orange);
         color: #fff;
+        border: 1px solid var(--orange);
+      }
+      .dl-btn--primary:hover {
+        background: transparent;
+        color: var(--orange);
       }
 
-      .btn-android {
-        background: #1f5439;
-        color: #fff;
+      .dl-btn--ghost {
+        background: transparent;
+        color: var(--white);
+        border: 1px solid rgba(0, 0, 0, 0.25);
+      }
+      .dl-btn--ghost:hover {
+        border-color: var(--white);
+        background: rgba(0, 0, 0, 0.04);
       }
 
-      .btn-apk {
-        background: #fff;
-        color: #1f5439;
-        border: 2px solid #1f5439;
-        padding: 12px 26px;
-      }
-
-      .btn svg {
-        width: 22px;
-        height: 22px;
+      .dl-btn svg {
+        width: 18px;
+        height: 18px;
         flex-shrink: 0;
-      }
-
-      /* Guides */
-      .guides {
-        border-top: 1px solid #e5e5e5;
-        padding: 48px 0;
-      }
-
-      .guide {
-        margin-bottom: 48px;
-      }
-
-      .guide:last-child {
-        margin-bottom: 0;
-      }
-
-      .guide h2 {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        color: #1a1a1a;
-      }
-
-      .guide ol {
-        padding-left: 24px;
-      }
-
-      .guide li {
-        margin-bottom: 12px;
-        color: #444;
-        font-size: 15px;
-      }
-
-      .guide li:last-child {
-        margin-bottom: 0;
-      }
-
-      /* Footer */
-      .footer {
-        border-top: 1px solid #e5e5e5;
-        padding: 32px 0;
-        text-align: center;
-      }
-
-      .footer p {
-        font-size: 13px;
-        color: #999;
-        margin-bottom: 8px;
-      }
-
-      .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-
-      .footer-links a {
-        font-size: 13px;
-        color: #666;
-        text-decoration: none;
-        transition: color 0.15s ease;
-      }
-
-      .footer-links a:hover {
-        color: #1a1a1a;
-      }
-
-      /* Language picker */
-      .lang-picker {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 6px;
-        padding: 16px 0 0;
-      }
-
-      .lang-btn {
-        background: none;
-        border: 1px solid transparent;
-        border-radius: 6px;
-        padding: 4px 10px;
-        font-size: 13px;
-        font-weight: 600;
-        color: #999;
-        cursor: pointer;
-        font-family: inherit;
-        transition:
-          color 0.15s ease,
-          border-color 0.15s ease;
-      }
-
-      .lang-btn:hover {
-        color: #666;
-      }
-
-      .lang-btn.active {
-        color: #1a1a1a;
-        border-color: #ddd;
       }
 
       .ios-compat-note {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 6px;
-        margin-top: -52px;
-        margin-bottom: 16px;
-        font-size: 13px;
-        color: #888;
+        gap: 4px;
+        font-size: 12px;
+        color: var(--dimmer);
+        line-height: 1.5;
+        max-width: 480px;
+        margin: 0 auto;
+        text-align: center;
       }
 
-      .compat-sep {
-        color: #ccc;
+      /* Guides */
+      .guides-section {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: var(--pad-v) var(--pad-h);
+        border-top: 1px solid var(--faint);
       }
 
-      .link-btn {
-        background: none;
-        border: none;
-        color: #666;
-        font-size: 13px;
+      .guides-section .section__header {
+        margin-bottom: 32px;
+      }
+
+      .guides-section .how__headline {
+        font-size: clamp(36px, 4vw, 64px);
         font-weight: 500;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+
+      .guides-section .how__headline em {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .guides-section .how__intro {
+        font-size: clamp(17px, 1.4vw, 20px);
+        color: var(--dim);
+        max-width: 480px;
+        margin-bottom: clamp(48px, 6vw, 64px);
+      }
+
+      .guides-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1px;
+        background: var(--faint);
+        border: 1px solid var(--faint);
+      }
+
+      .guide {
+        background: var(--black);
+        padding: clamp(28px, 3vw, 44px) clamp(24px, 2.5vw, 36px);
+      }
+
+      .guide h2 {
+        font-size: 19px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: var(--white);
+        margin-bottom: 8px;
+      }
+
+      .guide ol {
+        list-style: none;
+        counter-reset: step;
+        padding: 0;
+        margin: 0;
+      }
+
+      .guide li {
+        position: relative;
+        counter-increment: step;
+        padding: 16px 0 16px 36px;
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--dim);
+        border-bottom: 1px solid var(--faint);
+      }
+
+      .guide li:last-child {
+        border-bottom: none;
+      }
+
+      .guide li::before {
+        content: counter(step, decimal-leading-zero);
+        position: absolute;
+        left: 0;
+        top: 18px;
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--orange);
+        letter-spacing: 0.08em;
+      }
+
+      /* Language picker — reskinned */
+      .lang-picker {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: clamp(40px, 5vw, 64px) var(--pad-h) 0;
+      }
+
+      .lang-btn {
+        background: none;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 100px;
+        padding: 5px 12px;
+        font-family: var(--font-sans);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        color: var(--dimmer);
         cursor: pointer;
-        font-family: inherit;
-        text-decoration: underline;
-        text-underline-offset: 2px;
+        transition: all 0.15s;
       }
 
-      .link-btn:hover {
-        color: #1a1a1a;
+      .lang-btn:hover {
+        border-color: rgba(0, 0, 0, 0.35);
+        color: var(--white);
       }
 
-      /* Saved device bar */
+      .lang-btn.active {
+        border-color: var(--orange);
+        color: var(--orange);
+        background: rgba(255, 38, 0, 0.06);
+      }
+
+      /* Saved-device bar (kept for when feature returns) */
       .saved-device-bar {
         text-align: center;
-        margin-bottom: 12px;
+        margin: 16px auto 0;
         font-size: 14px;
-        color: #444;
+        color: var(--dim);
         display: none;
       }
-
       .saved-device-bar.visible {
         display: block;
       }
-
       .saved-device-bar .device-label {
         font-weight: 600;
+        color: var(--white);
       }
-
       .saved-device-bar .change-btn {
         background: none;
         border: none;
-        color: #666;
+        color: var(--orange);
         font-size: 13px;
         cursor: pointer;
         font-family: inherit;
@@ -254,11 +277,26 @@
         margin-left: 6px;
       }
 
-      .saved-device-bar .change-btn:hover {
-        color: #1a1a1a;
+      .compat-sep {
+        color: var(--faint);
       }
 
-      /* Modal */
+      .link-btn {
+        background: none;
+        border: none;
+        color: var(--orange);
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: inherit;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .link-btn:hover {
+        opacity: 0.7;
+      }
+
+      /* ── MODAL (kept intact for when compat feature returns) ── */
       .modal-overlay {
         position: fixed;
         inset: 0;
@@ -267,13 +305,11 @@
         display: none;
         animation: fadeIn 0.2s ease;
       }
-
       .modal-overlay.open {
         display: flex;
         align-items: flex-end;
         justify-content: center;
       }
-
       .modal {
         background: #fff;
         width: 100%;
@@ -283,7 +319,6 @@
         flex-direction: column;
         animation: slideUp 0.3s ease;
       }
-
       .modal-header {
         display: flex;
         align-items: center;
@@ -292,13 +327,12 @@
         border-bottom: 1px solid #eee;
         flex-shrink: 0;
       }
-
       .modal-header h2 {
         font-size: 18px;
         font-weight: 600;
         color: #1a1a1a;
       }
-
+      .modal-back,
       .modal-close {
         background: none;
         border: none;
@@ -308,16 +342,14 @@
         padding: 4px 8px;
         line-height: 1;
       }
-
+      .modal-back:hover,
       .modal-close:hover {
         color: #1a1a1a;
       }
-
       .modal-search {
         padding: 12px 20px;
         flex-shrink: 0;
       }
-
       .modal-search input {
         width: 100%;
         padding: 10px 14px;
@@ -326,220 +358,44 @@
         font-size: 15px;
         font-family: inherit;
         outline: none;
-        transition: border-color 0.15s ease;
       }
-
       .modal-search input:focus {
-        border-color: #999;
+        border-color: var(--orange);
       }
-
       .device-list {
-        flex: 1;
         overflow-y: auto;
         padding: 0 20px 20px;
-        -webkit-overflow-scrolling: touch;
       }
-
-      .device-brand-header {
-        position: sticky;
-        top: 0;
-        background: #fff;
-        padding: 12px 0 6px;
-        font-size: 13px;
-        font-weight: 700;
-        color: #999;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        z-index: 1;
-      }
-
       .device-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding: 12px 0;
         border-bottom: 1px solid #f0f0f0;
         cursor: pointer;
-        transition: background 0.1s ease;
+        font-size: 15px;
+        color: #1a1a1a;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
-
       .device-item:hover {
-        background: #fafafa;
+        color: var(--orange);
       }
-
-      .device-item.saved {
-        background: #f0faf4;
+      .device-item:last-child {
+        border-bottom: none;
       }
-
-      .device-name {
-        font-size: 15px;
-        color: #1a1a1a;
-      }
-
-      .device-badge {
+      .device-item .device-status {
+        margin-left: auto;
         font-size: 12px;
-        font-weight: 600;
-        padding: 3px 10px;
-        border-radius: 99px;
-        flex-shrink: 0;
+        padding: 2px 8px;
+        border-radius: 999px;
       }
-
-      .device-badge.compatible {
-        background: #e8f5e9;
-        color: #2e7d32;
+      .device-status.ok {
+        background: #e6f6ed;
+        color: #1f7a3f;
       }
-
-      .device-badge.not-compatible {
-        background: #fbe9e7;
-        color: #c62828;
+      .device-status.no {
+        background: #fde8e8;
+        color: #b3261e;
       }
-
-      .device-badge.maybe {
-        background: #fff8e1;
-        color: #f57f17;
-      }
-
-      .no-results {
-        text-align: center;
-        padding: 32px 0;
-        color: #999;
-        font-size: 14px;
-      }
-
-      .help-section {
-        padding: 12px 20px 20px;
-        border-top: 1px solid #eee;
-        flex-shrink: 0;
-      }
-
-      .help-section summary {
-        font-size: 14px;
-        font-weight: 500;
-        color: #666;
-        cursor: pointer;
-        padding: 8px 0;
-      }
-
-      .help-section summary:hover {
-        color: #1a1a1a;
-      }
-
-      .help-section ol {
-        padding-left: 20px;
-        margin-top: 8px;
-      }
-
-      .help-section li {
-        font-size: 13px;
-        color: #555;
-        margin-bottom: 6px;
-        line-height: 1.5;
-      }
-
-      .device-result {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 48px 20px;
-        text-align: center;
-      }
-      .device-result.visible {
-        display: flex;
-      }
-
-      .result-icon {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-      .result-icon.success {
-        background: #e8f5e9;
-      }
-      .result-icon.error {
-        background: #fbe9e7;
-      }
-      .result-icon.maybe {
-        background: #fff8e1;
-      }
-      .result-icon.unlisted {
-        background: #f5f5f5;
-      }
-      .result-icon svg {
-        width: 32px;
-        height: 32px;
-      }
-      .result-icon.success svg {
-        color: #2e7d32;
-      }
-      .result-icon.error svg {
-        color: #c62828;
-      }
-      .result-icon.maybe svg {
-        color: #f57f17;
-      }
-      .result-icon.unlisted svg {
-        color: #757575;
-      }
-
-      .result-title {
-        font-size: 18px;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-bottom: 4px;
-      }
-      .result-device-name {
-        font-size: 15px;
-        color: #666;
-        margin-bottom: 4px;
-      }
-      .result-message {
-        font-size: 14px;
-        color: #999;
-        margin-bottom: 24px;
-      }
-
-      .result-download-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 32px;
-        background: #1a1a1a;
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-        font-family: inherit;
-        text-decoration: none;
-        transition: opacity 0.15s ease;
-      }
-      .result-download-btn:hover {
-        opacity: 0.85;
-      }
-
-      .modal-back {
-        background: none;
-        border: none;
-        font-size: 18px;
-        color: #666;
-        cursor: pointer;
-        padding: 4px 8px;
-        font-family: inherit;
-        display: none;
-      }
-      .modal-back:hover {
-        color: #1a1a1a;
-      }
-      .modal-back.visible {
-        display: inline-block;
-      }
-
       .device-item.not-listed {
         border-top: 1px solid #e0e0e0;
         margin-top: 8px;
@@ -548,63 +404,193 @@
         color: #666;
         font-size: 14px;
       }
+      .device-result {
+        display: none;
+        padding: 32px 20px;
+        text-align: center;
+      }
+      .device-result.visible {
+        display: block;
+      }
+      .result-icon {
+        font-size: 36px;
+        margin-bottom: 12px;
+      }
+      .result-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #1a1a1a;
+      }
+      .result-device-name {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 12px;
+      }
+      .result-message {
+        font-size: 15px;
+        color: #444;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      .result-download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background: var(--orange);
+        color: #fff;
+        border-radius: 2px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .help-section {
+        padding: 0 20px 20px;
+        font-size: 14px;
+        color: #666;
+      }
+      .help-section details summary {
+        cursor: pointer;
+        padding: 8px 0;
+      }
+      .help-section ol {
+        padding-left: 20px;
+        margin-top: 8px;
+      }
+      .help-section li {
+        margin: 4px 0;
+      }
 
       @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
-
       @keyframes slideUp {
-        from {
-          transform: translateY(100%);
-        }
-        to {
-          transform: translateY(0);
-        }
-      }
-
-      /* Responsive */
-      @media (max-width: 480px) {
-        .header {
-          padding: 48px 0 36px;
-        }
-
-        .downloads {
-          flex-direction: column;
-          align-items: center;
-          padding-bottom: 48px;
-        }
-
-        .btn {
-          width: 100%;
-          justify-content: center;
-        }
-
-        .ios-compat-note {
-          margin-top: -36px;
-          flex-wrap: wrap;
-        }
+        from { transform: translateY(100%); }
+        to { transform: translateY(0); }
       }
 
       @media (min-width: 481px) {
         .modal-overlay.open {
           align-items: center;
         }
-
         .modal {
           max-width: 480px;
           border-radius: 16px;
           max-height: 70vh;
         }
       }
+
+      @media (max-width: 768px) {
+        .guides-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .downloads {
+          flex-direction: column;
+          align-items: stretch;
+          padding: 0 12px;
+        }
+        .dl-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="container">
+    <canvas class="site-canvas" id="bgCanvas" aria-hidden="true"></canvas>
+    <canvas class="dots-canvas" id="dotsCanvas" aria-hidden="true"></canvas>
+
+    <header class="nav" id="nav">
+      <a href="/" class="nav__logo" aria-label="Shift Home">
+        <img src="site-assets/img/logo.svg" alt="SHIFT" class="nav__logo-img" width="100" height="28" />
+      </a>
+      <div class="nav__right">
+        <a href="/marketing" class="footer__link">About</a>
+        <a href="/support" class="footer__link">Support</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="download-hero" id="hero">
+        <img src="assets/primary_icon.png" alt="Shift app icon" class="app-icon" />
+        <p class="download-hero__eyebrow" data-i18n="hero_eyebrow">Now in early access</p>
+        <h1>
+          Get Shift.<br />
+          <em>Start earning.</em>
+        </h1>
+        <p class="download-hero__lede" data-i18n="hero_lede">
+          Record clips during your normal day at work. Submit through the app. Get paid for what you'd be doing anyway.
+        </p>
+
+        <div class="downloads">
+          <a href="https://testflight.apple.com/join/XHR7gcXS" class="dl-btn dl-btn--primary">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+            </svg>
+            <span data-i18n="btn_ios">Download for iOS</span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.microagi.android" class="dl-btn dl-btn--ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67c-.19-.29-.54-.38-.84-.22-.29.16-.4.54-.24.85L6.4 9.48A10.78 10.78 0 002 18h20a10.78 10.78 0 00-4.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z" />
+            </svg>
+            <span data-i18n="btn_android">Download for Android</span>
+          </a>
+          <a href="https://github.com/MicroAGI-Labs/app-v2-distribution/releases/latest/download/shift.apk" class="dl-btn dl-btn--ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+            </svg>
+            <span data-i18n="btn_apk">Download APK</span>
+          </a>
+        </div>
+
+        <p class="ios-compat-note">
+          <span>Works best on Android 12+ with 8GB RAM, or iOS 18.6+.</span>
+          <span>Sign up and follow the in-app instructions to check device compatibility.</span>
+        </p>
+      </section>
+
+      <section class="guides-section" id="install">
+        <div class="section__header">
+          <span class="section__num">01</span>
+          <span class="section__label">install</span>
+        </div>
+        <h2 class="how__headline">
+          From download<br /><em>to your first clip.</em>
+        </h2>
+        <p class="how__intro">Pick your platform and follow the steps.</p>
+
+        <div class="guides-grid">
+          <div class="guide">
+            <h2 data-i18n="guide_ios_title">iOS Installation Guide</h2>
+            <ol>
+              <li data-i18n="guide_ios_1">Tap the "Download for iOS" button on your iPhone</li>
+              <li data-i18n="guide_ios_2">If TestFlight isn't installed, you'll be redirected to the App Store — install it first</li>
+              <li data-i18n="guide_ios_3">Return to this page and tap the download button again</li>
+              <li data-i18n="guide_ios_4">Tap "Accept" to join the beta testing program</li>
+              <li data-i18n="guide_ios_5">Tap "Install" to download Shift</li>
+            </ol>
+          </div>
+
+          <div class="guide">
+            <h2 data-i18n="guide_android_title">Android Installation Guide</h2>
+            <ol>
+              <li data-i18n="guide_android_1">Tap the "Download for Android" button to download the APK file</li>
+              <li data-i18n="guide_android_2">Open the downloaded file from your notifications or file manager</li>
+              <li data-i18n="guide_android_3">If prompted, allow installation from unknown sources: Go to Settings > Security (or Apps & notifications) and enable "Install unknown apps" for your browser</li>
+              <li data-i18n="guide_android_4">Tap "Install" and wait for the installation to complete</li>
+              <li data-i18n="guide_android_5">Open Shift from your app drawer</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
       <div class="lang-picker">
         <button data-lang="en" class="lang-btn active">EN</button>
         <button data-lang="bg" class="lang-btn">BG</button>
@@ -619,110 +605,29 @@
         <button data-lang="pl" class="lang-btn">PL</button>
         <button data-lang="tr" class="lang-btn">TR</button>
       </div>
-      <header class="header">
-        <img src="assets/primary_icon.png" alt="Shift" class="app-icon" />
-        <h1 data-i18n="heading">Get early access to Shift</h1>
-      </header>
+    </main>
 
-      <div class="downloads">
-        <a
-          href="https://testflight.apple.com/join/XHR7gcXS"
-          class="btn btn-ios"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
-            />
-          </svg>
-          <span data-i18n="btn_ios">Download for iOS</span>
-        </a>
-        <a
-          href="https://play.google.com/store/apps/details?id=com.microagi.android"
-          class="btn btn-android"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67c-.19-.29-.54-.38-.84-.22-.29.16-.4.54-.24.85L6.4 9.48A10.78 10.78 0 002 18h20a10.78 10.78 0 00-4.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"
-            />
-          </svg>
-          <span data-i18n="btn_android">Download for Android</span>
-        </a>
-        <a
-          href="https://github.com/MicroAGI-Labs/app-v2-distribution/releases/latest/download/shift.apk"
-          class="btn btn-apk"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-          </svg>
-          <span data-i18n="btn_apk">Download APK</span>
-        </a>
-      </div>
-      <div class="ios-compat-note" style="flex-direction: column;">
-        <span>Most compatible with >Android v12, >8GB RAM and iOS 18.6 and above.</span>
-        <span>For more details, please sign up and follow the instructions to check compatibility.</span>
-      </div>
-      <!-- Temporarily removed: device compatibility feature will return later
-      <div class="ios-compat-note">
-        <span data-i18n="ios_compat_note">All iPhones with iOS 18.6 or above are supported</span>
-        <span class="compat-sep">·</span>
-        <button class="link-btn" id="compat-link-btn" data-i18n="btn_compatible_devices">Compatible Devices</button>
-      </div>
-      <div class="saved-device-bar" id="saved-device-bar">
-        <span class="device-label" id="saved-device-label"></span>
-        <button class="change-btn" id="change-device-btn" data-i18n="change_device">Change</button>
-      </div>
-      -->
-      <div class="guides">
-        <div class="guide">
-          <h2 data-i18n="guide_ios_title">iOS Installation Guide</h2>
-          <ol>
-            <li data-i18n="guide_ios_1">
-              Tap the "Download for iOS" button on your iPhone
-            </li>
-            <li data-i18n="guide_ios_2">
-              If TestFlight isn't installed, you'll be redirected to the App
-              Store — install it first
-            </li>
-            <li data-i18n="guide_ios_3">
-              Return to this page and tap the download button again
-            </li>
-            <li data-i18n="guide_ios_4">
-              Tap "Accept" to join the beta testing program
-            </li>
-            <li data-i18n="guide_ios_5">Tap "Install" to download Shift</li>
-          </ol>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo" aria-label="Shift Home">
+            <img src="site-assets/img/logo.svg" alt="SHIFT" class="footer__logo-img" width="80" height="22" />
+          </a>
+          <p class="footer__tagline">Turning real work into real value.</p>
+          <p class="footer__tagline">A MicroAGI company.</p>
         </div>
-
-        <div class="guide">
-          <h2 data-i18n="guide_android_title">Android Installation Guide</h2>
-          <ol>
-            <li data-i18n="guide_android_1">
-              Tap the "Download for Android" button to download the APK file
-            </li>
-            <li data-i18n="guide_android_2">
-              Open the downloaded file from your notifications or file manager
-            </li>
-            <li data-i18n="guide_android_3">
-              If prompted, allow installation from unknown sources: Go to
-              Settings > Security (or Apps & notifications) and enable "Install
-              unknown apps" for your browser
-            </li>
-            <li data-i18n="guide_android_4">
-              Tap "Install" and wait for the installation to complete
-            </li>
-            <li data-i18n="guide_android_5">Open Shift from your app drawer</li>
-          </ol>
+        <div class="footer__right">
+          <a href="/marketing" class="footer__link">About</a>
+          <a href="/support" class="footer__link">Support</a>
+          <a href="mailto:support@go-shift.app" class="footer__link">support@go-shift.app</a>
+          <a href="mailto:privacy@go-shift.app" class="footer__link">privacy@go-shift.app</a>
         </div>
       </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 SHIFT. A MicroAGI GmbH brand.</p>
+      </div>
+    </footer>
 
-      <footer class="footer">
-        <p>Shift</p>
-        <nav class="footer-links" aria-label="Site links">
-          <a href="/marketing">About</a>
-          <a href="/support">Support</a>
-        </nav>
-      </footer>
-    </div>
     <div class="modal-overlay" id="modal-overlay">
       <div class="modal">
         <div class="modal-header">

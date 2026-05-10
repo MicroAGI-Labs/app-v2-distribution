@@ -79,25 +79,38 @@
 
     .support__topics li {
       background: var(--black);
-      padding: clamp(20px, 2vw, 28px) clamp(20px, 2.5vw, 32px);
+      padding: clamp(24px, 2.5vw, 32px) clamp(24px, 2.5vw, 36px);
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--white);
-      letter-spacing: -0.005em;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
     }
 
     .support__topics li::after {
       content: '';
+      position: absolute;
+      top: clamp(28px, 2.6vw, 36px);
+      right: clamp(24px, 2.5vw, 36px);
       display: block;
       width: 24px;
       height: 1px;
       background: var(--orange);
-      flex-shrink: 0;
       opacity: 0.6;
+    }
+
+    .support__topic-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: -0.005em;
+      padding-right: 40px;
+    }
+
+    .support__topic-body {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--dim);
+      line-height: 1.6;
     }
 
     .support__note {
@@ -210,14 +223,38 @@
       </p>
 
       <ul class="support__topics" aria-label="Common support topics">
-        <li><span>App issues</span></li>
-        <li><span>Video upload problems</span></li>
-        <li><span>Submission review status</span></li>
-        <li><span>Quality requirements</span></li>
-        <li><span>Account access</span></li>
-        <li><span>Payment or payout questions</span></li>
-        <li><span>Feedback &amp; feature requests</span></li>
-        <li><span>Privacy &amp; data requests</span></li>
+        <li>
+          <span class="support__topic-title">App issues</span>
+          <span class="support__topic-body">Crashes, freezes, login problems, or the app behaving strangely on your device. Tell us what happened and we'll get it sorted.</span>
+        </li>
+        <li>
+          <span class="support__topic-title">Video upload problems</span>
+          <span class="support__topic-body">Uploads getting stuck, failing partway, or showing an error. Most fixes are quick once we know what your phone is doing.</span>
+        </li>
+        <li>
+          <span class="support__topic-title">Submission review status</span>
+          <span class="support__topic-body">Wondering where your submission sits in the queue, or why a clip is taking longer than usual. We can check the state of anything you've sent in.</span>
+        </li>
+        <li>
+          <span class="support__topic-title">Quality requirements</span>
+          <span class="support__topic-body">Confused about resolution, length, lighting, or what kind of work qualifies. We'll point you to the current bar so your next clip clears review.</span>
+        </li>
+        <li>
+          <span class="support__topic-title">Account access</span>
+          <span class="support__topic-body">Locked out, can't log in, lost access to the email you signed up with, or need to update your details. We'll get you back in.</span>
+        </li>
+        <li>
+          <span class="support__topic-title">Payment or payout questions</span>
+          <span class="support__topic-body">Payouts that haven't arrived, missing balance updates, or anything about how earnings get sent to your account. Reach out and we'll trace it.</span>
+        </li>
+        <li>
+          <span class="support__topic-title">Feedback &amp; feature requests</span>
+          <span class="support__topic-body">Ideas for things you want Shift to do, gripes about how it works today, or just thoughts on the experience. We read every message.</span>
+        </li>
+        <li>
+          <span class="support__topic-title">Privacy &amp; data requests</span>
+          <span class="support__topic-body">Access to your data, corrections, or deletion of your account. Privacy requests go to a dedicated inbox so they get handled in line with data protection law.</span>
+        </li>
       </ul>
     </section>
 
