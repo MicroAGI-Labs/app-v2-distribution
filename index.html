@@ -501,6 +501,46 @@
           justify-content: center;
         }
       }
+
+      /* Nav brand — app icon + wordmark */
+      .nav__logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav__app-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 7px;
+        display: block;
+      }
+      .nav__brand-text {
+        font-family: var(--font-sans);
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--white);
+      }
+
+      /* Footer brand — same pattern */
+      .footer__logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .footer__app-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        display: block;
+      }
+      .footer__brand-text {
+        font-family: var(--font-sans);
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--white);
+      }
     </style>
   </head>
   <body>
@@ -509,7 +549,8 @@
 
     <header class="nav" id="nav">
       <a href="/" class="nav__logo" aria-label="Shift Home">
-        <img src="site-assets/img/logo.svg" alt="SHIFT" class="nav__logo-img" width="100" height="28" />
+        <img src="assets/primary_icon.png" alt="" class="nav__app-icon" />
+        <span class="nav__brand-text">Shift</span>
       </a>
       <div class="nav__right">
         <a href="/marketing" class="footer__link">About</a>
@@ -595,7 +636,8 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <a href="/" class="footer__logo" aria-label="Shift Home">
-            <img src="site-assets/img/logo.svg" alt="SHIFT" class="footer__logo-img" width="80" height="22" />
+            <img src="assets/primary_icon.png" alt="" class="footer__app-icon" />
+            <span class="footer__brand-text">Shift</span>
           </a>
           <p class="footer__tagline">Turning real work into real value.</p>
           <p class="footer__tagline">A MicroAGI company.</p>
