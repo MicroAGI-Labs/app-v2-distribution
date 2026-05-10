@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 453 123" fill="none">
+  <!--
+    SHIFT Logo — vector recreation from brand CSS spec (453×123 frame)
+    Icon: 5 rectangles forming the ascending bars + descending elements (abstract S / two hands)
+    Wordmark: "shift" in Neue Haas Grotesk Display Pro (fallback: Helvetica Neue, Arial Black)
+  -->
+
+  <!-- ── ICON ───────────────────────────────────────────────────── -->
+  <!-- Bar 1: short, leftmost, bottom-aligned -->
+  <rect x="0"     y="78.6"  width="22.5" height="41.4"  fill="currentColor"/>
+  <!-- Bar 2: medium, bottom-aligned -->
+  <rect x="29.3"  y="57.0"  width="23.3" height="63.0"  fill="currentColor"/>
+  <!-- Bar 3: full height, tallest, bottom-aligned -->
+  <rect x="59.2"  y="1.1"   width="23.1" height="119.0" fill="currentColor"/>
+  <!-- Element 4: descending from top, to the right of bar 3 -->
+  <rect x="89.1"  y="1.1"   width="22.9" height="63.1"  fill="currentColor"/>
+  <!-- Element 5: small, top-right corner of icon -->
+  <rect x="119.1" y="1.1"   width="21.9" height="41.2"  fill="currentColor"/>
+
+  <!-- ── WORDMARK ───────────────────────────────────────────────── -->
+  <text
+    x="158"
+    y="108"
+    font-family="'Neue Haas Grotesk Display Pro', 'Helvetica Neue', 'Arial Black', Arial, sans-serif"
+    font-weight="900"
+    font-size="105"
+    letter-spacing="-3"
+    fill="currentColor">shift</text>
+</svg>
