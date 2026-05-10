@@ -51,7 +51,8 @@
       /* Download buttons */
       .downloads {
         display: flex;
-        gap: 16px;
+        flex-wrap: wrap;
+        gap: 12px;
         justify-content: center;
         padding-bottom: 64px;
       }
@@ -80,6 +81,13 @@
       .btn-android {
         background: #1f5439;
         color: #fff;
+      }
+
+      .btn-apk {
+        background: #fff;
+        color: #1f5439;
+        border: 2px solid #1f5439;
+        padding: 12px 26px;
       }
 
       .btn svg {
@@ -620,6 +628,15 @@
           </svg>
           <span data-i18n="btn_android">Download for Android</span>
         </a>
+        <a
+          href="https://github.com/MicroAGI-Labs/app-v2-distribution/releases/latest/download/shift.apk"
+          class="btn btn-apk"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+          </svg>
+          <span data-i18n="btn_apk">Download APK</span>
+        </a>
       </div>
       <div class="ios-compat-note" style="flex-direction: column;">
         <span>Most compatible with >Android v12, >8GB RAM and iOS 18.6 and above.</span>
@@ -743,6 +760,7 @@
             heading: "Get early access to Shift",
             btn_ios: "Download for iOS",
             btn_android: "Download for Android",
+            btn_apk: "Download APK",
             guide_ios_title: "iOS Installation Guide",
             guide_ios_1: 'Tap the "Download for iOS" button on your iPhone',
             guide_ios_2:
@@ -796,6 +814,7 @@
             heading: "Shift का शुरुआती एक्सेस पाएं",
             btn_ios: "iOS के लिए डाउनलोड करें",
             btn_android: "Android के लिए डाउनलोड करें",
+            btn_apk: "APK डाउनलोड करें",
             guide_ios_title: "iOS इंस्टॉलेशन गाइड",
             guide_ios_1:
               'अपने iPhone पर "iOS के लिए डाउनलोड करें" बटन पर टैप करें',
@@ -851,6 +870,7 @@
             heading: "Shift'e erken erişim sağlayın",
             btn_ios: "iOS için indir",
             btn_android: "Android için indir",
+            btn_apk: "APK indir",
             guide_ios_title: "iOS Kurulum Rehberi",
             guide_ios_1: 'iPhone\'unuzda "iOS için indir" butonuna dokunun',
             guide_ios_2:
@@ -907,6 +927,7 @@
             heading: "Получете ранен достъп до Shift",
             btn_ios: "Изтегли за iOS",
             btn_android: "Изтегли за Android",
+            btn_apk: "Изтегли APK",
             guide_ios_title: "Ръководство за инсталация на iOS",
             guide_ios_1:
               'Докоснете бутона "Изтегли за iOS" на вашия iPhone',
@@ -963,6 +984,7 @@
             heading: "Erhalten Sie frühen Zugriff auf Shift",
             btn_ios: "Für iOS herunterladen",
             btn_android: "Für Android herunterladen",
+            btn_apk: "APK herunterladen",
             guide_ios_title: "iOS-Installationsanleitung",
             guide_ios_1:
               'Tippen Sie auf Ihrem iPhone auf die Schaltfläche "Für iOS herunterladen"',
@@ -1021,6 +1043,7 @@
             heading: "Magkaroon ng maagang access sa Shift",
             btn_ios: "I-download para sa iOS",
             btn_android: "I-download para sa Android",
+            btn_apk: "I-download ang APK",
             guide_ios_title: "Gabay sa Pag-install sa iOS",
             guide_ios_1:
               'I-tap ang button na "I-download para sa iOS" sa iyong iPhone',
@@ -1078,6 +1101,7 @@
             heading: "Obtenez un accès anticipé à Shift",
             btn_ios: "Télécharger pour iOS",
             btn_android: "Télécharger pour Android",
+            btn_apk: "Télécharger l'APK",
             guide_ios_title: "Guide d'installation iOS",
             guide_ios_1:
               'Appuyez sur le bouton "Télécharger pour iOS" sur votre iPhone',
@@ -1138,6 +1162,7 @@
             heading: "Dapatkan akses awal ke Shift",
             btn_ios: "Unduh untuk iOS",
             btn_android: "Unduh untuk Android",
+            btn_apk: "Unduh APK",
             guide_ios_title: "Panduan Instalasi iOS",
             guide_ios_1: 'Ketuk tombol "Unduh untuk iOS" di iPhone Anda',
             guide_ios_2:
@@ -1193,6 +1218,7 @@
             heading: "Ottieni l'accesso anticipato a Shift",
             btn_ios: "Scarica per iOS",
             btn_android: "Scarica per Android",
+            btn_apk: "Scarica l'APK",
             guide_ios_title: "Guida all'installazione iOS",
             guide_ios_1:
               'Tocca il pulsante "Scarica per iOS" sul tuo iPhone',
@@ -1250,6 +1276,7 @@
             heading: "მიიღეთ ადრეული წვდომა Shift-ზე",
             btn_ios: "ჩამოტვირთე iOS-ისთვის",
             btn_android: "ჩამოტვირთე Android-ისთვის",
+            btn_apk: "ჩამოტვირთე APK",
             guide_ios_title: "iOS-ის ინსტალაციის სახელმძღვანელო",
             guide_ios_1:
               'შეეხეთ ღილაკს "ჩამოტვირთე iOS-ისთვის" თქვენს iPhone-ზე',
@@ -1308,6 +1335,7 @@
             heading: "Krijg vroege toegang tot Shift",
             btn_ios: "Downloaden voor iOS",
             btn_android: "Downloaden voor Android",
+            btn_apk: "APK downloaden",
             guide_ios_title: "iOS-installatiegids",
             guide_ios_1: 'Tik op de knop "Downloaden voor iOS" op je iPhone',
             guide_ios_2:
@@ -1363,6 +1391,7 @@
             heading: "Uzyskaj wczesny dostęp do Shift",
             btn_ios: "Pobierz na iOS",
             btn_android: "Pobierz na Androida",
+            btn_apk: "Pobierz APK",
             guide_ios_title: "Przewodnik instalacji iOS",
             guide_ios_1:
               'Dotknij przycisku "Pobierz na iOS" na swoim iPhonie',
