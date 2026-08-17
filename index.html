@@ -594,6 +594,7 @@
         <button data-lang="en" class="lang-btn active">EN</button>
         <button data-lang="bg" class="lang-btn">BG</button>
         <button data-lang="de" class="lang-btn">DE</button>
+        <button data-lang="es" class="lang-btn">ES</button>
         <button data-lang="fil" class="lang-btn">FIL</button>
         <button data-lang="fr" class="lang-btn">FR</button>
         <button data-lang="hi" class="lang-btn">HI</button>
@@ -965,6 +966,65 @@
             success_back: "Zurück",
             ios_compat_note:
               "Alle iPhones mit iOS 18.6 oder höher werden unterstützt",
+          },
+          es: {
+            title: "Shift — Descargar",
+            heading: "Obtén acceso anticipado a Shift",
+            btn_ios: "Descargar para iOS",
+            btn_android: "Descargar para Android",
+            btn_apk: "Descargar APK",
+            guide_ios_title: "Guía de instalación para iOS",
+            guide_ios_1:
+              'Toca el botón "Descargar para iOS" en tu iPhone',
+            guide_ios_2:
+              "Si TestFlight no está instalado, se te redirigirá al App Store — instálalo primero",
+            guide_ios_3:
+              "Vuelve a esta página y toca el botón de descarga de nuevo",
+            guide_ios_4:
+              'Toca "Aceptar" para unirte al programa de pruebas beta',
+            guide_ios_5: 'Toca "Instalar" para descargar Shift',
+            guide_android_title: "Guía de instalación para Android",
+            guide_android_1:
+              'Toca el botón "Descargar para Android" para descargar el archivo APK',
+            guide_android_2:
+              "Abre el archivo descargado desde tus notificaciones o el administrador de archivos",
+            guide_android_3:
+              'Si se te solicita, permite la instalación desde fuentes desconocidas: Ve a Ajustes > Seguridad (o Aplicaciones y notificaciones) y activa "Instalar aplicaciones desconocidas" para tu navegador',
+            guide_android_4:
+              'Toca "Instalar" y espera a que se complete la instalación',
+            guide_android_5: "Abre Shift desde tu lista de aplicaciones",
+            btn_compatible_devices: "Dispositivos Android compatibles",
+            modal_title_compat: "Dispositivos Android compatibles",
+            modal_title_select: "Selecciona tu teléfono",
+            search_placeholder: "Buscar dispositivos...",
+            badge_compatible: "Probablemente compatible",
+            badge_not_compatible: "No compatible",
+            badge_maybe: "Se requiere información adicional",
+            no_results: "No se encontraron dispositivos",
+            help_find_model: "¿Cómo encuentro el modelo de mi teléfono?",
+            help_step_1: "Abre Ajustes en tu teléfono",
+            help_step_2:
+              'Toca "Información del teléfono" o "Acerca del dispositivo"',
+            help_step_3:
+              'Busca "Nombre del modelo" o "Número de modelo"',
+            help_step_4: "Compáralo con la lista de arriba",
+            change_device: "Cambiar",
+            success_compatible_title: "Probablemente compatible",
+            success_compatible_msg:
+              "¡Tu dispositivo probablemente es compatible! Lo confirmaremos dentro de la aplicación.",
+            success_not_compatible_title: "No compatible",
+            success_not_compatible_msg: "Tu dispositivo no es compatible",
+            success_maybe_title: "Se requiere información adicional",
+            success_maybe_msg:
+              "Confirmaremos la compatibilidad del dispositivo dentro de la aplicación.",
+            success_unlisted_title: "Dispositivo no listado",
+            success_unlisted_msg:
+              "Verificaremos la compatibilidad del dispositivo dentro de la aplicación.",
+            not_listed_btn: "Mi dispositivo no está en la lista",
+            success_download_btn: "Descargar APK",
+            success_back: "Atrás",
+            ios_compat_note:
+              "Todos los iPhones con iOS 18.6 o superior son compatibles",
           },
           fil: {
             title: "Shift — I-download",
@@ -1425,6 +1485,7 @@
           else if (navLang.startsWith("hi")) applyLanguage("hi");
           else if (navLang.startsWith("bg")) applyLanguage("bg");
           else if (navLang.startsWith("de")) applyLanguage("de");
+          else if (navLang.startsWith("es")) applyLanguage("es");
           else if (navLang.startsWith("fil") || navLang.startsWith("tl"))
             applyLanguage("fil");
           else if (navLang.startsWith("fr")) applyLanguage("fr");
